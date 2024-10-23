@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CSA_Rep_and_Manager_Field_Validation</fullName>
+    <active>true</active>
+    <description>Making &quot;Enrollment Channel&quot;, &quot;Enrollment Date&quot; and &quot;Membership Number&quot; read only for &quot;JGL Baseline&quot; profile.</description>
+    <errorConditionFormula>AND( $Profile.Name = &apos;JGL Customer Service Manager&apos;, OR( ISCHANGED( EnrollmentChannel ),  ISCHANGED( EnrollmentDate ), ISCHANGED( MembershipNumber ) ) )</errorConditionFormula>
+    <errorMessage>You do not have access to change Membership Number, Enrollment Channel or Enrollment Date.</errorMessage>
+</ValidationRule>

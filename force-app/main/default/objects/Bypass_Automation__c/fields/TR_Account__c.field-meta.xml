@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TR_Account__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Flag to disable trigger logic for Account object only</description>
+    <externalId>false</externalId>
+    <label>TR Account</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WalletCallOut__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>true to make callout to wallet service even if LMS already has links data
+false (default) not to make callout if LMS already has links data</description>
+    <externalId>false</externalId>
+    <label>WalletCallOut</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

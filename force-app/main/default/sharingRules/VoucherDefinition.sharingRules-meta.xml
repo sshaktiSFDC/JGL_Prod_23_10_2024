@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Share_Promo_Category_with_CSA</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Share Promo Category with CSA</label>
+        <sharedTo>
+            <group>Customer_Service_Managers</group>
+        </sharedTo>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>Category__c</field>
+            <operation>equals</operation>
+            <value>Promotional Rewards</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>contains</operation>
+            <value>Birthday</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingOwnerRules>
+        <fullName>All_Internal_Share_with_Admins</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>All Internal Share with Admins</label>
+        <sharedTo>
+            <group>Admin_Group</group>
+        </sharedTo>
+        <sharedFrom>
+            <allInternalUsers></allInternalUsers>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

@@ -1,0 +1,302 @@
+<template>
+
+    <div class="slds-box slds-theme_default">
+
+        <template if:true={showSpinner}>
+            <lightning-spinner alternative-text="Loading..." size="medium"></lightning-spinner>
+        </template>
+
+        <lightning-card title="Customer Details">
+
+            <template  if:true={customer}>
+
+                <lightning-button-group slot="actions">
+                    <template if:true={anyChanges}>
+                        <lightning-button label="Save" onclick={handleSave}></lightning-button>
+                        <lightning-button label="Discard Changes" onclick={handleDiscardChanges}></lightning-button>
+                    </template>
+                    <template if:false={anyChanges}>
+                        <lightning-button label="Refresh" onclick={handleRefresh}></lightning-button>
+                    </template>
+                    <!--<lightning-button label="View Record Updates" onclick={handleViewUpdates}></lightning-button>-->
+                </lightning-button-group>
+        
+                <div class="slds-grid slds-wrap slds-p-top_small">
+
+                    <!--Loyality Memeber Basics-->
+                    <div class="slds-size_1-of-2 slds-p-left_large">
+
+                        <div class="slds-grid">
+                            <div class="slds-size_1-of-4 slds-p-around_xxx-small">
+                                Email
+                            </div>
+                            <div class="slds-size_3-of-4 slds-p-around_xxx-small">
+                                <lightning-input name="email" type="email" variant="label-hidden" label="Email" required value={customer.email} onchange={handleCustomerFieldChange}></lightning-input>
+                            </div>
+                        </div>               
+
+                        <div class="slds-grid">
+                            <div class="slds-size_1-of-4 slds-p-around_xxx-small">
+                                First Name
+                            </div>
+                            <div class="slds-size_3-of-4 slds-p-around_xxx-small">
+                                <lightning-input name="firstname" variant="label-hidden" label="First Name" value={customer.firstname} onchange={handleCustomerFieldChange}></lightning-input>
+                            </div>
+                        </div>            
+
+                        <div class="slds-grid">
+                            <div class="slds-size_1-of-4 slds-p-around_xxx-small">
+                                Last Name
+                            </div>
+                            <div class="slds-size_3-of-4 slds-p-around_xxx-small">
+                                <lightning-input name="lastname" variant="label-hidden" label="Last Name" value={customer.lastname} onchange={handleCustomerFieldChange}></lightning-input>
+                            </div>
+                        </div>  
+                         
+                        <div class="slds-grid">
+                            <div class="slds-size_1-of-4 slds-p-around_xxx-small">
+                                Mobile
+                            </div>
+                            <div class="slds-size_3-of-4  slds-p-around_xxx-small">
+                                <template if:true={isAU}>
+                                    <lightning-input 
+                                        name="mobile"
+                                        pattern="^04\d{8}$" 
+                                        message-when-pattern-mismatch="Australian mobile numbers must be 10 characters long, start with '04', and only contain numbers" 
+                                        variant="label-hidden" 
+                                        label="Mobile" 
+                                        value={customer.mobile} 
+                                        onchange={handleCustomerFieldChange}>
+                                    </lightning-input>
+                                </template>
+                                <template if:true={isNZ}>
+                                    <lightning-input 
+                                        name="mobile"
+                                        pattern="^02.{7,9}$" 
+                                        message-when-pattern-mismatch="New Zealand mobile numbers must be 9-11 characters long, start with '02', and only contain numbers" 
+                                        variant="label-hidden" 
+                                        label="Mobile" 
+                                        value={customer.mobile} 
+                                        onchange={handleCustomerFieldChange}>
+                                    </lightning-input>
+                                </template>                                
+                                <template if:false={isAUorNZ}>
+                                    <lightning-input 
+                                        name="mobile"
+                                        variant="label-hidden" 
+                                        label="Mobile" 
+                                        value={customer.mobile} 
+                                        onchange={handleCustomerFieldChange}>
+                                    </lightning-input>
+                                </template>
+                            </div>
+                        </div> 
+                        
+                        <div class="slds-grid">
+                            <div class="slds-size_1-of-4 slds-p-around_xxx-small">
+                                Date Of Birth
+                            </div>
+                            <div class="slds-size_3-of-4 slds-p-around_xxx-small">        
+                                <lightning-input name="dob" type="date" date-style="short" variant="label-hidden" label="Date Of Birth" value={customer.dob} onchange={handleCustomerFieldChange}></lightning-input>
+                            </div>
+                        </div>
+                        
+                        <div class="slds-grid">
+                            <div class="slds-size_1-of-4 slds-p-around_xxx-small">
+                                Country
+                            </div>
+                            <div class="slds-size_3-of-4 slds-p-around_xxx-small">
+                                <lightning-combobox
+                                    name="country"
+                                    variant="label-hidden"
+                                    label="Country"
+                                    value={customer.country}
+                                    placeholder="Select a country"
+                                    options={countryOptions}
+                                    onchange={handleCustomerFieldChange}>
+                                </lightning-combobox>
+                            </div>
+                        </div>
+                        
+                        <template if:true={isCountryAustralia}> 
+                            <div class="slds-grid">
+                                <div class="slds-size_1-of-4 slds-p-around_xxx-small">
+                                    State
+                                </div>
+                                <div class="slds-size_3-of-4 slds-p-around_xxx-small">
+                                    <lightning-combobox
+                                        name="state"
+                                        variant="label-hidden"
+                                        label="State"
+                                        value={customer.state}
+                                        placeholder="Select a state"
+                                        options={australianStateOptions}
+                                        onchange={handleCustomerFieldChange}>
+                                    </lightning-combobox>
+                                </div>
+                            </div>                            
+                        </template>
+
+                    </div><!--END: Loyality Memeber Basics--> 
+
+                    <!-- Loyality Memeber Advanced -->
+                    <div class="slds-size_1-of-2 slds-p-left_large">
+
+                        <div class="slds-m-right_large slds-p-around_medium bordered-card">
+
+                            <div class="slds-grid">
+                                <div class="slds-size_1-of-4 slds-p-around_xxx-small">
+                                    <strong>Loyalty Program Member Details</strong>
+                                </div>
+                                <div class="slds-p-around_xxx-small">
+                                    
+                                </div>
+                            </div>                            
+
+                            <div class="slds-grid slds-p-top_medium">
+                                <div class="slds-size_1-of-4 slds-p-around_xxx-small">
+                                    Loyalty Member Number
+                                </div>
+                                <div class="slds-p-around_xxx-small">
+                                    <template if:true={salesforceLoyaltyMember}>
+                                        <a onclick={openLoyaltyMemberAccountView}><strong>{memberNumber}</strong></a>
+                                    </template>
+                                        <template if:false={salesforceLoyaltyMember}>
+                                    <strong>{memberNumber}</strong>
+                                </template>
+                                </div>
+                            </div>
+
+                            <template if:true={loyaltyMember}>
+                                <div class="slds-grid slds-p-top_small">
+                                    <div class="slds-size_1-of-4 slds-p-around_xxx-small">
+                                        Preferences 
+                                    </div>
+                                    <div class="slds-p-around_xxx-small">
+                                        <lightning-input 
+                                            name="email"
+                                            type="checkbox" 
+                                            label="Allow Email" 
+                                            checked={loyaltyMember.preferences.email}
+                                            onchange={handleLoyaltyPreferencesFieldChange}>
+                                        </lightning-input>
+                                    </div>
+                                    <div class="slds-p-around_xxx-small">
+                                        <lightning-input
+                                            name="sms" 
+                                            type="checkbox" 
+                                            label="Allow SMS" 
+                                            checked={loyaltyMember.preferences.sms}
+                                            onchange={handleLoyaltyPreferencesFieldChange}>
+                                        </lightning-input>                            
+                                    </div>
+                                </div>               
+
+                                <div class="slds-grid slds-p-top_small">
+                                    <div class="slds-size_1-of-4 slds-p-around_xxx-small">
+                                        Enrolment Date
+                                    </div>
+                                    <div class="slds-size_3-of-4 slds-p-around_xxx-small">
+                                        <lightning-formatted-date-time
+                                            value={loyaltyMember.enrolmentDate}
+                                            date-style="short"
+                                            time-zone-name="short">
+                                        </lightning-formatted-date-time>                                
+                                    </div>
+                                </div>   
+
+                                <div class="slds-grid slds-p-top_small">
+                                    <div class="slds-size_1-of-4 slds-p-around_xxx-small">
+                                        Enrolment Channel
+                                    </div>
+                                    <div class="slds-size_3-of-4 slds-p-around_xxx-small">
+                                        {loyaltyMember.enrolmentChannel}
+                                    </div>
+                                </div>                       
+
+                                <div class="slds-grid slds-p-top_small">
+                                    <div class="slds-size_1-of-4 slds-p-around_xxx-small">
+                                        Enrolment Brand
+                                    </div>
+                                    <div class="slds-size_3-of-4 slds-p-around_xxx-small">
+                                        {loyaltyMember.enrolmentBrandName}
+                                    </div>
+                                </div>  
+
+                                <div class="slds-grid slds-p-top_small">
+                                    <div class="slds-size_1-of-4 slds-p-around_xxx-small">
+                                        Rewards Available
+                                    </div>
+                                    <div class="slds-size_3-of-4 slds-p-around_xxx-small">
+                                        {loyaltyMember.rewardsAvailable} 
+                                    </div>
+                                </div>                                   
+                                
+                                <div class="slds-grid slds-p-top_small">
+                                    <div class="slds-size_1-of-4 slds-p-around_xxx-small">
+                                        Points
+                                    </div>
+                                    <div class="slds-size_3-of-4 slds-p-around_xxx-small">
+                                        {loyaltyMember.pointsBalance}
+                                    </div>
+                                </div>                        
+
+                                <div class="slds-grid slds-p-top_small">
+                                    <div class="slds-size_1-of-4 slds-p-around_xxx-small">
+                                        Points to Next Reward
+                                    </div>
+                                    <div class="slds-size_3-of-4 slds-p-around_xxx-small">
+                                        {loyaltyMember.pointsToNextVoucher}
+                                    </div>
+                                </div> 
+
+                            </template>
+
+                        </div>
+
+                        <div class="slds-m-right_large slds-m-top_small slds-p-around_medium bordered-card">
+
+                            <div class="slds-grid">
+                                <div class="slds-size_1-of-4 slds-p-around_xxx-small">
+                                    <strong>Email Subscriptions</strong>
+                                </div>
+                                <div class="slds-p-around_xxx-small">
+                                    
+                                </div>
+                            </div>                            
+                            
+                            <template if:true={subscriptions}>
+                                <div class="slds-grid slds-p-top_small">
+                                    <div class="slds-size_1-of-4 slds-p-around_xxx-small">
+                                        Active Email Subscriptions
+                                    </div>
+                                    <div class="slds-size_3-of-4 slds-p-around_xxx-small">
+                                        <div class="slds-grid slds-wrap">
+                                            <template for:each={subscriptions} for:item="subsItem" for:index="index">  
+                                                <div class="slds-p-right_small" key={subsItem.subscription}>
+                                                    <lightning-input 
+                                                        name={subsItem.subscription}
+                                                        data-index={index}
+                                                        type="checkbox" 
+                                                        label={subsItem.subscription} 
+                                                        checked={subsItem.allowEmail}
+                                                        onchange={handleSubscriptionFieldChange}>
+                                                    </lightning-input>
+                                                </div>   
+                                            </template>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </template>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </template>
+            
+        </lightning-card>
+    </div>
+
+</template>

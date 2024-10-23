@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TR_Loyalty_Program_Member__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Flag to disable trigger logic for Loyalty Program Member object only</description>
+    <externalId>false</externalId>
+    <label>TR Loyalty Program Member</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

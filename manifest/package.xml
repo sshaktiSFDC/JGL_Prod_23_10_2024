@@ -1,0 +1,1462 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+	<types>
+		<members>LoyaltyProgramMemberTriggerHandler</members>
+		<members>LoyaltyProgramMemberTriggerHandlerTest</members>
+		<name>ApexClass</name>
+	</types>
+	<types>
+		<members>WalletMemberUpdateEndpoint</members>
+		<name>ExternalServiceRegistration</name>
+	</types>
+	<types>
+		<members>Member_Update_Wallet_Member_Details_and_Points</members>
+		<members>Scheduled_Wallet_Member_Details_and_Points_Batch</members>
+		<name>Flow</name>
+	</types>
+	  <types>
+        <members>CanonicalLoyaltyMemberVoucher</members>
+        <members>CanonicalLoyaltyWalletLink</members>
+        <members>CanonicalLoyaltyWalletUpdate</members>
+        <members>ChangeStatusOfVoucherForReturnProcess</members>
+        <members>ChangeStatusOfVoucherForReturnTest</members>
+        <members>ConvertStringToNumberText</members>
+        <members>ConvertStringToNumberTextTest</members>
+        <members>CountTotalRewardsValueAction</members>
+        <members>CountTotalRewardsValueActionTest</members>
+        <members>CountVoucherReversalValueAction</members>
+        <members>CountVoucherReversalValueActionTest</members>
+        <members>DebugLoyaltyProcessAction</members>
+        <members>DebugLoyaltyProcessActionTest</members>
+        <members>DirectIssueVoucherEventAction</members>
+        <members>DirectIssueVoucherEventActionTest</members>
+        <members>ExpireVouchersBatch</members>
+        <members>ExpireVouchersBatchTest</members>
+        <members>GenerateVoucherCodesAction</members>
+        <members>GenerateVoucherCodesActionTest</members>
+        <members>GetOriginalPointsForPurchaseAction</members>
+        <members>GetOriginalPointsForPurchaseActionTest</members>
+        <members>GetPointsForManualAdjustment</members>
+        <members>GetPointsForManualAdjustmentTest</members>
+        <members>GlobalConstants</members>
+        <members>HandleReturnProcessTJAction</members>
+        <members>HandleReturnProcessTJActionTest</members>
+        <members>IndirectIssueVoucherAction</members>
+        <members>IndirectIssueVoucherActionTest</members>
+        <members>IndirectIssueVoucherEventTest</members>
+        <members>IndirectIssueVoucherEventTriggerHandler</members>
+        <members>IssueBirthdayVoucherBatchTest</members>
+        <members>IssueBirthdayVouchersBatch</members>
+        <members>IssueRewardVouchersAction</members>
+        <members>IssueRewardVouchersActionTest</members>
+        <members>IssueVoucherEventTriggerHandler</members>
+        <members>IssueVoucherEventTriggerHandlerTest</members>
+        <members>JgLoyaltyController</members>
+        <members>JgLoyaltyControllerTest</members>
+        <members>LoyaltyMemberVoucherRestService</members>
+        <members>LoyaltyMemberVoucherRestServiceMock</members>
+        <members>LoyaltyMemberVoucherRestServiceTest</members>
+        <members>LoyaltyProcessFlowWrapper</members>
+        <members>LoyaltyProgramMemberTriggerHandler</members>
+        <members>LoyaltyProgramMemberTriggerHandlerTest</members>
+        <members>LoyaltyRuntimeConfigurationAction</members>
+        <members>LoyaltyRuntimeConfigurationActionTest</members>
+        <members>LoyaltyRuntimeHelper</members>
+        <members>LoyaltyRuntimeHelperTest</members>
+        <members>LoyaltyWalletLinksRestService</members>
+        <members>LoyaltyWalletLinksRestServiceTest</members>
+        <members>MemberEnrolEventTriggerHandler</members>
+        <members>MemberEnrolEventTriggerHandlerTest</members>
+        <members>MemberMigrationBatch</members>
+        <members>MemberMigrationBatchTest</members>
+        <members>MemberUpdateEventTriggerHandler</members>
+        <members>MemberUpdateEventTriggerHandlerTest</members>
+        <members>MemberUpdateQueueable</members>
+        <members>MemberUpdateQueueableTest</members>
+        <members>PointsExpirationBatch</members>
+        <members>PointsExpirationBatchTest</members>
+        <members>ProcessRewardsAction</members>
+        <members>ProcessRewardsActionTest</members>
+        <members>ProcessRewardsEventTriggerHandler</members>
+        <members>ProcessRewardsEventTriggerHandlerTest</members>
+        <members>RedeemVoucherTransactionTriggHandlerTest</members>
+        <members>RedeemVoucherTransactionTriggerHandler</members>
+        <members>ResetReturnTrackingEventAction</members>
+        <members>ResetReturnTrackingEventActionTest</members>
+        <members>ReverseRedeemedVoucherEventAction</members>
+        <members>ReverseRedeemedVoucherEventActionTest</members>
+        
+        <members>ScheduleBatchWalletRetry</members>
+        <members>SearchLoyaltyLedgerByContactController</members>
+        <members>SearchLoyaltyLedgerContactControllerTest</members>
+        <members>TestDataFactory</members>
+        <members>TriggerHandler</members>
+        <members>TriggerHandlerTest</members>
+        <members>UpdateJournalEventAction</members>
+        <members>UpdateJournalEventActionTest</members>
+        <members>UpdateVoucherEventAction</members>
+        <members>UpdateVoucherEventActionTest</members>
+        <members>UtilityHelper</members>
+        <members>UtilityHelperTest</members>
+        <members>VoucherTriggerHandler</members>
+        <members>VoucherTriggerHandlerMock</members>
+        <members>VoucherTriggerHandlerTest</members>
+        <members>WalletServiceCallout</members>
+        <members>WalletServiceCalloutMock</members>
+        <members>WalletServiceCalloutTest</members>
+        <members>WalletServiceLogUtility</members>
+        <members>WalletServiceLogUtilityTest</members>
+        <members>WalletServiceMock</members>
+        
+        <name>ApexClass</name>
+    </types>
+    
+    
+    
+    
+    <types>
+        <members>IndirectIssueVoucherEventTrigger</members>
+        <members>IssueVoucherEventTrigger</members>
+        <members>LoyaltyProgramMemberTrigger</members>
+        <members>MemberEnrolEventTrigger</members>
+        <members>MemberUpdateEventTrigger</members>
+        <members>ProcessRewardsEventTrigger</members>
+        <members>RedeemVoucherTransactionTrigger</members>
+        <members>VoucherTrigger</members>
+        
+        <name>ApexTrigger</name>
+    </types>
+    
+    
+    
+    
+    <types>
+        <members>Bulk_Create_Migration_Journals</members>
+        <members>Bulk_Create_Migration_Member_Records</members>
+        <members>Bulk_Create_Migration_Members_via_Staging_Table</members>
+        <members>Bulk_Create_PersonAccount_Records</members>
+        <members>Bulk_Create_PersonAccount_via_Migration_StagingTable</members>
+        <members>Bulk_Insert_Member_Points_for_Migration</members>
+        <members>Bulk_PreProcess_CIM_for_MembershipNo</members>
+        <members>Bulk_Update_Member_StatusPoints_for_Migration</members>
+        <members>Create_Bulk_Manual_Points_Adjustments</members>
+        <members>Detect_Empty_Wallet_Links</members>
+        <members>Migration_Check_CIM_or_Email_Exist</members>
+        <members>Migration_Member_Wallet_Links_BLANK</members>
+        <members>NameCheck_for_Validation_LMSWallet</members>
+        <members>Updates_total_reward_points_fields_on_member</members>
+        <name>BatchCalcJobDefinition</name>
+    </types>
+    <types>
+        <members>Account.Account_Compact_Layout</members>
+        <members>TransactionJournal.Transaction_Journal_Compact_Layout</members>
+        <members>User.User_Layout</members>
+        <name>CompactLayout</name>
+    </types>
+    <types>
+        <members>JGL_Middleware</members>
+        <name>ConnectedApp</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CorsWhitelistOrigin</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CspTrustedSite</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CustomApplication</name>
+    </types>
+    <types>
+        <members>JUST_GROUP_CIM_URL_PREFIX</members>
+        <members>MigrationQuery</members>
+        <name>CustomLabel</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CustomLabels</name>
+    </types>
+    <types>
+        <members>Account</members>
+        <members>Account</members>
+        <members>AccountContactRole</members>
+        <members>Accrual_Purchase_Multiplier__c</members>
+        
+        
+        
+        <members>AsyncOperationTracker</members>
+        
+        
+        <members>BatchJob</members>
+        <members>BatchJobPart</members>
+        <members>BatchJobPartFailedRecord</members>
+        <members>Benefit</members>
+        <members>BenefitParameterValue</members>
+        <members>BenefitType</members>
+        <members>BusinessBrand</members>
+        <members>Bypass_Automation__c</members>
+        <members>CalcMatrixColumnRange</members>
+        <members>CalcProcStepRelationship</members>
+        <members>CalculationMatrix</members>
+        <members>CalculationMatrixColumn</members>
+        <members>CalculationMatrixRow</members>
+        <members>CalculationMatrixVersion</members>
+        <members>CalculationProcedure</members>
+        <members>CalculationProcedureStep</members>
+        <members>CalculationProcedureVariable</members>
+        <members>CalculationProcedureVersion</members>
+        <members>Campaign</members>
+        <members>CampaignMember</members>
+        <members>Case</members>
+        <members>CaseContactRole</members>
+        <members>ChatterActivity</members>
+        <members>CollaborationGroup</members>
+        <members>CollaborationGroupMember</members>
+        <members>CommSubscription</members>
+        <members>CommSubscriptionChannelType</members>
+        <members>CommSubscriptionConsent</members>
+        <members>CommSubscriptionTiming</members>
+        <members>Contact</members>
+        <members>ContactPointAddress</members>
+        <members>ContactPointConsent</members>
+        <members>ContactPointEmail</members>
+        <members>ContactPointPhone</members>
+        <members>ContactPointTypeConsent</members>
+        <members>ContactRequest</members>
+        <members>ContentVersion</members>
+        <members>Contract</members>
+        <members>ContractContactRole</members>
+        <members>Customer</members>
+        <members>DTRecordsetReplica</members>
+        <members>DataAction</members>
+        <members>DataActionJobSummary</members>
+        <members>DataActionTarget</members>
+        <members>DataCommCapActvTarget</members>
+        <members>DataGraph</members>
+        <members>DataKitDeploymentLog</members>
+        <members>DataLakeObjectInstance</members>
+        <members>DataModelRelationConstraint</members>
+        <members>DataPackageKit</members>
+        <members>DataQueryWorkspace</members>
+        <members>DataQueryWorkspaceTab</members>
+        <members>DataSourceBundle</members>
+        <members>DataStream</members>
+        <members>DataUsePurpose</members>
+        <members>DecisionTblFileImportData</members>
+        <members>DuplicateRecordItem</members>
+        <members>DuplicateRecordSet</members>
+        <members>EmailMessage</members>
+        <members>EngagementChannelType</members>
+        <members>Event</members>
+        <members>ExchangeUserMapping</members>
+        <members>ExpressionFilter</members>
+        <members>ExpressionFilterCriteria</members>
+        <members>ExpressionSet</members>
+        <members>ExpressionSetVersion</members>
+        <members>ExtDataShare</members>
+        <members>ExtDataShareTarget</members>
+        <members>ExternalEventMapping</members>
+        <members>FeedItem</members>
+        <members>FlowOrchestrationInstance</members>
+        <members>FlowOrchestrationLog</members>
+        <members>FlowOrchestrationStageInstance</members>
+        <members>FlowOrchestrationStepInstance</members>
+        <members>FlowOrchestrationWorkItem</members>
+        <members>ForecastingAdjustment</members>
+        <members>ForecastingCategoryMapping</members>
+        <members>ForecastingCustomData</members>
+        <members>ForecastingOwnerAdjustment</members>
+        <members>ForecastingQuota</members>
+        <members>ForecastingTypeToCategory</members>
+        <members>GameDefinition</members>
+        <members>GameParticipant</members>
+        <members>GameParticipantReward</members>
+        <members>GameReward</members>
+        <members>Idea</members>
+        <members>IdentityResolution</members>
+        <members>Image</members>
+        <members>Indirect_Issue_Voucher_Event__e</members>
+        <members>Individual</members>
+        <members>Issue_Voucher_Event__e</members>
+        <members>JGL_Member_Data_Migration__c</members>
+        <members>JournalSubType</members>
+        <members>JournalType</members>
+        <members>Knowledge__kav</members>
+        <members>Lead</members>
+        <members>LearningAssignment</members>
+        <members>LearningAssignmentProgress</members>
+        <members>LearningItem</members>
+        <members>LearningLinkProgress</members>
+        <members>Location</members>
+        <members>LocationTrustMeasure</members>
+        <members>LoyaltyAggrPointExprLedger</members>
+        <members>LoyaltyLedger</members>
+        <members>LoyaltyMemberCurrency</members>
+        <members>LoyaltyMemberTier</members>
+        <members>LoyaltyMembershipLifecycle</members>
+        <members>LoyaltyPartnerProduct</members>
+        <members>LoyaltyPgmEngmtAttrProm</members>
+        <members>LoyaltyPgmEngmtAttribute</members>
+        <members>LoyaltyPgmGroupMbrRlnsp</members>
+        <members>LoyaltyPgmMbrAttributeVal</members>
+        <members>LoyaltyPgmMbrPromEligView</members>
+        <members>LoyaltyPgmPartnerPromotion</members>
+        <members>LoyaltyProgram</members>
+        <members>LoyaltyProgramBadge</members>
+        <members>LoyaltyProgramCurrency</members>
+        <members>LoyaltyProgramCurrencyTier</members>
+        <members>LoyaltyProgramMbrPromotion</members>
+        <members>LoyaltyProgramMember</members>
+        <members>LoyaltyProgramMemberBadge</members>
+        <members>LoyaltyProgramMemberCase</members>
+        <members>LoyaltyProgramMemberMerge</members>
+        <members>LoyaltyProgramPartner</members>
+        <members>LoyaltyProgramProcess</members>
+        <members>LoyaltyProgramProcessParameter</members>
+        <members>LoyaltyProgramProcessRule</members>
+        <members>LoyaltyProgramProcessRuleVersion</members>
+        <members>LoyaltyProgramWidget</members>
+        <members>LoyaltyTier</members>
+        <members>LoyaltyTierBenefit</members>
+        <members>LoyaltyTierGroup</members>
+        
+        <members>MemberBenefit</members>
+        <members>Member_Enrol_Event__e</members>
+        <members>Member_Update_Event__e</members>
+        
+        
+        <members>Organisation_Settings__c</members>
+        <members>PartnerRole</members>
+        
+        <members>PendingServiceRouting</members>
+        <members>PersonAccount</members>
+        <members>Pricebook2</members>
+        <members>PricebookEntry</members>
+        <members>ProcessException</members>
+        <members>Process_Rewards_Event__e</members>
+        <members>Product2</members>
+        <members>ProductAttributeDefinition</members>
+        <members>ProductCatalog</members>
+        <members>ProductCategory</members>
+        <members>ProductCategoryDisqual</members>
+        <members>ProductCategoryProduct</members>
+        <members>ProductCategoryQualification</members>
+        <members>ProductClassification</members>
+        <members>ProductClassificationAttr</members>
+        <members>ProductComponentGroup</members>
+        <members>ProductComponentGrpOverride</members>
+        <members>ProductDisqualification</members>
+        <members>ProductQualification</members>
+        <members>ProductRelComponentOverride</members>
+        <members>ProductRelatedComponent</members>
+        <members>ProductRelationshipType</members>
+        <members>ProductSellingModel</members>
+        <members>ProfileSkill</members>
+        <members>ProfileSkillEndorsement</members>
+        <members>ProfileSkillUser</members>
+        <members>Promotion</members>
+        <members>PromotionLoyaltyPtnrProdt</members>
+        <members>PromotionMarketSegment</members>
+        <members>PromptAction</members>
+        <members>PromptError</members>
+        <members>QuickText</members>
+        <members>QuickTextUsage</members>
+        <members>Quote</members>
+        <members>QuoteLineItem</members>
+        <members>Recommendation</members>
+        <members>RecordAction</members>
+        <members>RecordMergeHistory</members>
+        <members>RedeemVoucherTransaction__e</members>
+        <members>RelationshipGraphView</members>
+        <members>Reset_Return_Tracking_EA__e</members>
+        <members>RevenueAsyncOperation</members>
+        <members>RevenueTransactionErrorLog</members>
+        <members>Reverse_Redeemed_Vouchers__e</members>
+        <members>RuleLibrary</members>
+        <members>RuleLibraryVersion</members>
+        
+        <members>Scorecard</members>
+        <members>ScorecardAssociation</members>
+        <members>ScorecardMetric</members>
+        <members>Seller</members>
+        <members>ServiceResource</members>
+        <members>Site</members>
+        <members>SocialPersona</members>
+        <members>SocialPost</members>
+        <members>Solution</members>
+        <members>StreamActivityAccess</members>
+        <members>StreamingChannel</members>
+        <members>TableauHostMapping</members>
+        <members>Task</members>
+        <members>Topic</members>
+        <members>TopicAssignment</members>
+        <members>TransactionJournal</members>
+        <members>Transaction_Journal_Update__e</members>
+        <members>UnitOfMeasure</members>
+        <members>User</members>
+        <members>UserCapabilityPreference</members>
+        <members>UserExternalCredential</members>
+        <members>UserLocalWebServerIdentity</members>
+        <members>UserPrioritizedRecord</members>
+        <members>UserProvisioningRequest</members>
+        <members>UserServicePresence</members>
+        <members>VideoCall</members>
+        <members>VideoCallParticipant</members>
+        <members>VideoCallRecording</members>
+        <members>VoiceCall</members>
+        <members>Voucher</members>
+        <members>VoucherDefinition</members>
+        <members>Wallet_Service_Log__c</members>
+        <members>WorkBadge</members>
+        <members>WorkBadgeDefinition</members>
+        <members>WorkOrder</members>
+        <members>WorkOrderLineItem</members>
+        <members>WorkThanks</members>
+        
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>Account-de</members>
+        <members>Account-es</members>
+        <members>Account-es_MX</members>
+        <members>Account-fr</members>
+        <members>Account-it</members>
+        <members>Account-ja</members>
+        <members>Account-pt_BR</members>
+        <members>Accrual_Purchase_Multiplier__c-en_US</members>
+        <members>Bypass_Automation__c-en_US</members>
+        <members>Campaign-de</members>
+        <members>Campaign-es</members>
+        <members>Campaign-es_MX</members>
+        <members>Campaign-fr</members>
+        <members>Campaign-it</members>
+        <members>Campaign-ja</members>
+        <members>Campaign-pt_BR</members>
+        <members>CampaignMember-de</members>
+        <members>CampaignMember-es</members>
+        <members>CampaignMember-es_MX</members>
+        <members>CampaignMember-fr</members>
+        <members>CampaignMember-it</members>
+        <members>CampaignMember-ja</members>
+        <members>CampaignMember-pt_BR</members>
+        <members>Contact-de</members>
+        <members>Contact-es</members>
+        <members>Contact-es_MX</members>
+        <members>Contact-fr</members>
+        <members>Contact-it</members>
+        <members>Contact-ja</members>
+        <members>Contact-pt_BR</members>
+        <members>Indirect_Issue_Voucher_Event__e-en_US</members>
+        <members>Issue_Voucher_Event__e-en_US</members>
+        <members>JGL_Member_Data_Migration__c-en_US</members>
+        <members>Knowledge__kav-en_US</members>
+        <members>Lead-de</members>
+        <members>Lead-es</members>
+        <members>Lead-es_MX</members>
+        <members>Lead-fr</members>
+        <members>Lead-it</members>
+        <members>Lead-ja</members>
+        <members>Lead-pt_BR</members>
+        <members>Member_Enrol_Event__e-en_US</members>
+        <members>Member_Update_Event__e-en_US</members>
+        <members>Organisation_Settings__c-en_US</members>
+        <members>Process_Rewards_Event__e-en_US</members>
+        <members>RedeemVoucherTransaction__e-en_US</members>
+        <members>Reset_Return_Tracking_EA__e-en_US</members>
+        <members>Reverse_Redeemed_Vouchers__e-en_US</members>
+        <members>SLIbycloudorca__LicensesSetting__c-en_US</members>
+        <members>Transaction_Journal_Update__e-en_US</members>
+        <members>User-de</members>
+        <members>User-en_US</members>
+        <members>User-es</members>
+        <members>User-es_MX</members>
+        <members>User-fr</members>
+        <members>User-it</members>
+        <members>User-ja</members>
+        <members>User-pt_BR</members>
+        <members>Voucher-en_US</members>
+        <members>VoucherDefinition-en_US</members>
+        <members>Wallet_Service_Log__c-en_US</members>
+        <name>CustomObjectTranslation</name>
+    </types>
+    <types>
+        <members>Accrual_Purchase_Multiplier__c</members>
+        <members>JGL_Member_Data_Migration__c</members>
+        
+        <members>Loyalty_Search</members>
+        
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>Sales_and_Marketing_Dashboards/AdoptionDashboard</members>
+        <members>Sales_and_Marketing_Dashboards/Best_Practice_Leads_Dashboard</members>
+        <members>Sales_and_Marketing_Dashboards/Best_Practices_Dashboard6</members>
+        <members>Service_Dashboards/Agent_Supervisor_Overview</members>
+        <members>Service_Dashboards/Service_Exec_Overview</members>
+        <members>Service_Dashboards/Service_KPIs</members>
+        <name>Dashboard</name>
+    </types>
+    <types>
+        <members>Accrual_Purchase_Multiplier</members>
+        <name>DecisionTable</name>
+    </types>
+    <types>
+        <members>Accrual_Purchase_Multiplier_Default</members>
+        <name>DecisionTableDatasetLink</name>
+    </types>
+    <types>
+        <members>SharedDocuments/org_migration_zip.zip</members>
+        <members>SocialService__Social_Customer_Service/SocialService__readme.txt</members>
+        <name>Document</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>DuplicateRule</name>
+    </types>
+    
+    
+    <types>
+        <members>Member</members>
+        <members>Partner</members>
+        <members>TransactionJournal</members>
+        <name>ExpressionSetObjectAlias</name>
+    </types>
+    <types>
+        <members>Wallet_Service</members>
+        <name>ExternalCredential</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ExternalServiceRegistration</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>FieldSet</name>
+    </types>
+    <types>
+        <members>Account_Record_Page</members>
+        <members>Account_Record_Page1</members>
+        <members>JG_Record</members>
+        <members>Just_Group_Home</members>
+        <members>Loyalty_Program_CSA_Record_Page</members>
+        <members>Loyalty_Program_Member_Record_Page</members>
+        <members>Loyalty_Program_Member_Record_Page1</members>
+        <members>Loyalty_Program_Record_Page</members>
+        <members>Loyalty_Program_Record_Page1</members>
+        <members>Reward_Record_Page</members>
+        <members>Reward_Record_Page1</members>
+        <name>FlexiPage</name>
+    </types>
+    <types>
+        <members>Handle_Return_Process_Reverse_Voucher_Status</members>
+        <members>Handle_Return_Process_TJ</members>
+        <members>JBSystemFlow_Account</members>
+        <members>JBSystemFlow_Voucher</members>
+        <members>JBSystem_Voucher_RecordFlow</members>
+        <members>Loyalty_Process_Debug_Process</members>
+        <members>Loyalty_Process_Generate_Voucher_Codes</members>
+        <members>Loyalty_Process_Get_Points_for_Manual_Adjustments</members>
+        <members>Loyalty_Process_Get_Runtime_Configuration</members>
+        <members>Loyalty_Process_Issue_Reward_Vouchers</members>
+        <members>Loyalty_Process_Process_Rewards</members>
+        <members>Loyalty_Process_Publish_Direct_Issue_Voucher_Event</members>
+        <members>Loyalty_Process_Publish_Event_Process_Rewards</members>
+        <members>Loyalty_Process_Publish_Indirect_Issue_Voucher_Event</members>
+        <members>Member_Contact_Update_To_Trigger_Member_Update_PE_Publishing</members>
+        <members>Member_Update_Wallet_External_Service_Callout</members>
+        <members>Member_Update_Wallet_Member_Details_and_Points</members>
+        <members>PE_Triggered_Handle_Return_Reverse_Voucher_Status</members>
+        <members>Publish_Event_for_Journal_Update</members>
+        <members>Publish_Event_for_Reversal_of_Redeemed_Vouchers</members>
+        <members>Publish_Voucher_Redeem_Event</members>
+        <members>Return_total_points_credited</members>
+        <members>Schedule_Daily_Check_and_Update_Wallet_Links</members>
+        <members>Schedule_Daily_Check_and_Update_Wallet_Links_AM</members>
+        <members>Schedule_Daily_Issue_Birthday_Vouchers_Batch</members>
+        <members>Schedule_Daily_Issue_Birthday_Vouchers_Night_Batch</members>
+        <members>Schedule_Daily_Points_Expiration_Batch</members>
+        <members>Schedule_Daily_Voucher_Expiration_Batch</members>
+        <members>Scheduled_Wallet_Member_Details_and_Points_Batch</members>
+        <members>Transaction_Journal_Adjust_Activity_and_Journal_Date</members>
+        <members>Transaction_Journal_Delete_Bulk_Voucher_Journals</members>
+        <members>Transaction_Journal_Manual_Points_Adjustment</members>
+        <members>Transaction_Journal_Member_Enrolment_Process</members>
+        <members>Transaction_Journal_Member_Migration_Process</members>
+        <members>Transaction_Journal_Points_Expiration_Process</members>
+        <members>Transaction_Journal_Reversal_VoucherReversal_Value</members>
+        <members>Update_total_reward_on_Loyalty_Program_Member</members>
+        <members>Voucher_AdHoc_Issuance_Generate_Journals_Ledgers</members>
+        <members>Voucher_After_Create_Update</members>
+        <members>Voucher_Before_Create</members>
+        
+        <name>Flow</name>
+    </types>
+    <types>
+        <members>Handle_Return_Process_Reverse_Voucher_Status</members>
+        <members>Handle_Return_Process_TJ</members>
+        <members>JBSystemFlow_Account</members>
+        <members>JBSystemFlow_Voucher</members>
+        <members>JBSystem_Voucher_RecordFlow</members>
+        <members>Loyalty_Process_Debug_Process</members>
+        <members>Loyalty_Process_Generate_Voucher_Codes</members>
+        <members>Loyalty_Process_Get_Points_for_Manual_Adjustments</members>
+        <members>Loyalty_Process_Get_Runtime_Configuration</members>
+        <members>Loyalty_Process_Issue_Reward_Vouchers</members>
+        <members>Loyalty_Process_Process_Rewards</members>
+        <members>Loyalty_Process_Publish_Direct_Issue_Voucher_Event</members>
+        <members>Loyalty_Process_Publish_Event_Process_Rewards</members>
+        <members>Loyalty_Process_Publish_Indirect_Issue_Voucher_Event</members>
+        <members>Member_Contact_Update_To_Trigger_Member_Update_PE_Publishing</members>
+        <members>Member_Update_Wallet_External_Service_Callout</members>
+        <members>Member_Update_Wallet_Member_Details_and_Points</members>
+        <members>PE_Triggered_Handle_Return_Reverse_Voucher_Status</members>
+        <members>Publish_Event_for_Journal_Update</members>
+        <members>Publish_Event_for_Reversal_of_Redeemed_Vouchers</members>
+        <members>Publish_Voucher_Redeem_Event</members>
+        <members>Return_total_points_credited</members>
+        <members>Schedule_Daily_Check_and_Update_Wallet_Links</members>
+        <members>Schedule_Daily_Check_and_Update_Wallet_Links_AM</members>
+        <members>Schedule_Daily_Issue_Birthday_Vouchers_Batch</members>
+        <members>Schedule_Daily_Issue_Birthday_Vouchers_Night_Batch</members>
+        <members>Schedule_Daily_Points_Expiration_Batch</members>
+        <members>Schedule_Daily_Voucher_Expiration_Batch</members>
+        <members>Scheduled_Wallet_Member_Details_and_Points_Batch</members>
+        <members>Transaction_Journal_Adjust_Activity_and_Journal_Date</members>
+        <members>Transaction_Journal_Delete_Bulk_Voucher_Journals</members>
+        <members>Transaction_Journal_Manual_Points_Adjustment</members>
+        <members>Transaction_Journal_Member_Enrolment_Process</members>
+        <members>Transaction_Journal_Member_Migration_Process</members>
+        <members>Transaction_Journal_Points_Expiration_Process</members>
+        <members>Transaction_Journal_Reversal_VoucherReversal_Value</members>
+        <members>Update_total_reward_on_Loyalty_Program_Member</members>
+        <members>Voucher_AdHoc_Issuance_Generate_Journals_Ledgers</members>
+        <members>Voucher_After_Create_Update</members>
+        <members>Voucher_Before_Create</members>
+        
+        <name>FlowDefinition</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>GlobalValueSet</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>Group</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>HomePageLayout</name>
+    </types>
+    <types>
+        <members>IframeWhiteListUrlSettings</members>
+        <name>IframeWhiteListUrlSettings</name>
+    </types>
+    <types>
+        <members>SalesforceDotCom_Home</members>
+        <name>InternalDataConnector</name>
+    </types>
+    <types>
+        <members>Account-Account Layout</members>
+        <members>Accrual_Purchase_Multiplier__c-Accrual Purchase Multiplier Layout</members>
+        <members>ActivationTarget-Activation Target Layout</members>
+        <members>Asset-Asset Layout</members>
+        <members>AssetRelationship-Asset Relationship Layout</members>
+        <members>AuthorizationForm-Authorization Form Layout</members>
+        <members>AuthorizationFormConsent-Authorization Form Consent Layout</members>
+        <members>AuthorizationFormDataUse-Authorization Form Data Use Layout</members>
+        <members>AuthorizationFormText-Authorization Form Text Layout</members>
+        <members>BatchJob-Batch Job Layout</members>
+        <members>BusinessBrand-Business Brand Layout</members>
+        <members>CalcMatrixColumnRange-Decision Matrix Column Range Layout</members>
+        <members>CalcProcStepRelationship-Expression Set Step Relationship Layout</members>
+        <members>CalculationMatrix-Decision Matrix Layout</members>
+        <members>CalculationMatrixColumn-Decision Matrix Column Layout</members>
+        <members>CalculationMatrixRow-Decision Matrix Row Layout</members>
+        <members>CalculationMatrixVersion-Decision Matrix Version Layout</members>
+        <members>CalculationProcedure-Calculation Procedure Layout</members>
+        <members>CalculationProcedureStep-Calculation Procedure Step Layout</members>
+        <members>CalculationProcedureVariable-Calculation Procedure Variable Layout</members>
+        <members>CalculationProcedureVersion-Calculation Procedure Version Layout</members>
+        
+        <members>Contact-Contact Layout</members>
+        <members>ContactPointAddress-Contact Point Address Layout</members>
+        <members>ContactPointEmail-Contact Point Email Layout</members>
+        <members>ContactPointPhone-Contact Point Phone Layout</members>
+        <members>ContactPointTypeConsent-Contact Point Type Consent Layout</members>
+        <members>ContentVersion-Content Version</members>
+        <members>Contract-Contract Layout</members>
+        <members>CspTrustedSite-Trusted URL Layout</members>
+        <members>Customer-Customer Layout</members>
+        
+        <members>DuplicateRecordSet-Duplicate Record Set Layout</members>
+        
+        <members>Event-Event Layout</members>
+        <members>ExpressionSet-Expression Set Layout</members>
+        <members>ExpressionSetVersion-Expression Set Version Layout</members>
+        
+        <members>FlowRecord-Flow Layout</members>
+        <members>Global-Global Layout</members>
+        
+        <members>JGL_Member_Data_Migration__c-JGL Member Data Migration Layout</members>
+        <members>JournalSubType-Journal Subtype Layout</members>
+        <members>JournalType-Journal Type Layout</members>
+        
+        
+        <members>LoyaltyLedger-Loyalty Ledger Layout</members>
+        <members>LoyaltyMemberCurrency-Loyalty Member Currency Layout</members>
+        <members>LoyaltyMemberTier-Loyalty Member Tier Layout</members>
+        <members>LoyaltyMembershipLifecycle-Loyalty Membership Lifecycle Layout</members>
+        <members>LoyaltyPartnerProduct-Loyalty Partner Product Layout</members>
+        <members>LoyaltyPgmEngmtAttrProm-Loyalty Program Engagement Attribute Promotion Layout</members>
+        <members>LoyaltyPgmEngmtAttribute-Loyalty Program Engagement Attribute Layout</members>
+        <members>LoyaltyPgmMbrAttributeVal-Loyalty Program Member Attribute Value Layout</members>
+        <members>LoyaltyProgram-Loyalty Program Layout</members>
+        <members>LoyaltyProgramCurrency-Loyalty Program Currency Layout</members>
+        <members>LoyaltyProgramCurrencyTier-Loyalty Program Currency Tier Layout</members>
+        <members>LoyaltyProgramMbrPromotion-Loyalty Program Member Promotion Layout</members>
+        <members>LoyaltyProgramMember-JGL Service Agent</members>
+        <members>LoyaltyProgramMember-JGL Service Manager</members>
+        <members>LoyaltyProgramMember-Loyalty Program Member Layout</members>
+        <members>LoyaltyProgramPartner-Loyalty Program Partner Layout</members>
+        <members>LoyaltyProgramProcess-Loyalty Program Process Layout</members>
+        <members>LoyaltyProgramProcessParameter-Loyalty Program Process Parameter Layout</members>
+        <members>LoyaltyProgramProcessRule-Loyalty Process Rule Layout</members>
+        <members>LoyaltyTierGroup-Loyalty Tier Group Layout</members>
+        
+        
+        <members>Order-Order Layout</members>
+        <members>OrderItem-Order Product Layout</members>
+        <members>PersonAccount-Person Account Layout</members>
+        <members>Pricebook2-Price Book Layout</members>
+        <members>PricebookEntry-Price Book Entry Layout</members>
+        <members>ProcessException-Process Exception Layout</members>
+        <members>Product2-Product Layout</members>
+        <members>ProductCatalog-Catalog Layout</members>
+        <members>ProductCategory-Category Layout</members>
+        
+        <members>Promotion-Promotion Layout</members>
+        
+        
+        
+        
+        <members>Solution-Solution Layout</members>
+        <members>Task-Task Layout</members>
+        <members>TransactionJournal-CSA Service Agent</members>
+        <members>TransactionJournal-Transaction Journal Layout</members>
+        <members>User-User Layout</members>
+        <members>UserAlt-User Profile Layout</members>
+        <members>UserAppMenuItem-Application Layout</members>
+        <members>UserProvAccount-User Provisioning Account Layout</members>
+        <members>UserProvisioningLog-User Provisioning Log Layout</members>
+        <members>UserProvisioningRequest-User Provisioning Request Layout</members>
+        <members>Voucher-Voucher Layout</members>
+        <members>VoucherDefinition-Voucher Definition Layout</members>
+        <members>Wallet_Service_Log__c-Wallet Service Log Layout</members>
+        
+        
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>LightningComponentBundle</name>
+    </types>
+    <types>
+        <members>Account.Accounts_Created_Today</members>
+        <members>Account.AllAccounts</members>
+        <members>Account.All_Business_Accounts</members>
+        <members>Account.All_Individual_Accounts</members>
+        <members>Account.MyAccounts</members>
+        <members>Accrual_Purchase_Multiplier__c.All</members>
+        <members>ActivationTarget.All_ActivationTargets</members>
+        <members>ActivationTarget.My_ActivationTargets</members>
+        <members>ActivationTarget.My_MCIS_ActivationTargets</members>
+        <members>ActivationTarget.My_S3_ActivationTargets</members>
+        <members>ActivationTarget.My_SFMC_ActivationTargets</members>
+        <members>Activity.MyActivities</members>
+        <members>Activity.MyDelegatedActivities</members>
+        <members>Activity.MyTeamsActivities</members>
+        <members>Activity.TodaysTasks</members>
+        <members>Activity.UpcomingEvents</members>
+        <members>Asset.AllAssets</members>
+        <members>AttrPicklistExcludedValue.All_AttrPicklistExcludedValues</members>
+        <members>AttributeCategory.All_AttributeCategorys</members>
+        <members>AttributeCategoryAttribute.All_AttributeCategoryAttributes</members>
+        <members>AttributeDefinition.All_AttributeDefinitions</members>
+        <members>AttributePicklist.All_AttributePicklists</members>
+        <members>AttributePicklistValue.All_AttributePicklistValues</members>
+        <members>AuthorizationForm.All_AuthorizationForms</members>
+        <members>AuthorizationFormConsent.All_AuthorizationFormConsents</members>
+        <members>AuthorizationFormDataUse.All_AuthorizationFormDataUses</members>
+        <members>AuthorizationFormText.All_AuthorizationFormText</members>
+        <members>BatchJob.All_Batch_Jobs</members>
+        <members>BatchJob.All_Batch_Jobs</members>
+        <members>BatchJobPart.All_Tasks</members>
+        <members>BatchJobPart.All_Tasks</members>
+        <members>BatchJobPart.All_Tasks_Calc</members>
+        <members>BatchJobPart.All_Tasks_Calc</members>
+        <members>BatchJobPartFailedRecord.All_Failed_Records</members>
+        <members>BatchJobPartFailedRecord.All_Failed_Records</members>
+        <members>Benefit.All_Benefits</members>
+        <members>Benefit.All_Benefits</members>
+        <members>BenefitType.All_BenefitTypes</members>
+        <members>BenefitType.All_BenefitTypes</members>
+        <members>BusinessBrand.All_BusinessBrands</members>
+        <members>BusinessBrand.All_BusinessBrands</members>
+        <members>CalculationMatrix.All_CalculationMatrices</members>
+        <members>CalculationMatrix.Org_PCM_Decision_Table</members>
+        <members>CalculationProcedure.All_CalculationProcedures</members>
+        <members>Campaign.AllActiveCampaigns</members>
+        <members>Campaign.MyActiveCampaigns</members>
+        
+        
+        <members>Contact.AllContacts</members>
+        <members>Contact.BulkMessageContacts</members>
+        <members>Contact.MyContacts</members>
+        <members>ContactPointAddress.All_ContactPointAddresses</members>
+        <members>ContactPointConsent.All_ContactPointConsents</members>
+        <members>ContactPointEmail.All_ContactPointEmails</members>
+        <members>ContactPointPhone.All_ContactPointPhones</members>
+        <members>ContactPointTypeConsent.All_ContactPointTypeConsents</members>
+        <members>ContactRequest.My_ContactRequests</members>
+        <members>ContactRequest.My_ContactRequests</members>
+        
+        <members>Customer.All_Customers</members>
+        <members>Customer.All_Customers</members>
+        
+        <members>DataQueryWorkspace.All_DataQueryWorkspaces</members>
+        <members>DataQueryWorkspace.My_DataQueryWorkspaces</members>
+        <members>DataStream.All_DataStreams</members>
+        <members>DataStream.My_DataStreams</members>
+        <members>DataUseLegalBasis.All_DataUseLegalBases</members>
+        <members>DataUsePurpose.All_DataUsePurposes</members>
+        <members>EngagementChannelType.All_EngagementChannelTypes</members>
+        <members>Event.MyRecentEvents</members>
+        <members>Event.MyRecentEvents</members>
+        <members>Event.MyTeamsRecentEvents</members>
+        <members>Event.MyTeamsRecentEvents</members>
+        <members>Event.MyTeamsUpcomingEvents</members>
+        <members>Event.MyTeamsUpcomingEvents</members>
+        <members>Event.MyUpcomingEvents</members>
+        <members>Event.MyUpcomingEvents</members>
+        <members>Event.TodaysAgenda</members>
+        <members>Event.TodaysAgenda</members>
+        <members>ExpressionSet.Org_PCM_Qual_Proc</members>
+        <members>ExtDataShare.All_ExtDataShares</members>
+        <members>ExtDataShareTarget.All_ExtDataShareTargets</members>
+        <members>ExtDataShareTarget.My_ExtDataShareTargets</members>
+        <members>FlowOrchestrationInstance.All_Orchestration_Instances</members>
+        <members>FlowOrchestrationInstance.All_Orchestration_Instances</members>
+        <members>FlowOrchestrationWorkItem.ALL_Open_Work_Items</members>
+        <members>FlowOrchestrationWorkItem.ALL_Open_Work_Items</members>
+        <members>FlowOrchestrationWorkItem.All_Work_Items</members>
+        <members>FlowOrchestrationWorkItem.All_Work_Items</members>
+        <members>GameDefinition.All_GameDefinitions</members>
+        <members>GameDefinition.All_GameDefinitions</members>
+        <members>GameParticipant.All_GameParticipants</members>
+        <members>GameParticipant.All_GameParticipants</members>
+        <members>GameParticipantReward.All_GameParticipantRewards</members>
+        <members>GameParticipantReward.All_GameParticipantRewards</members>
+        <members>GameReward.All_GameRewards</members>
+        <members>GameReward.All_GameRewards</members>
+        <members>Idea.Ideas_Last_7_Days</members>
+        <members>IdentityResolution.All_IdentityResolutions</members>
+        <members>Individual.All_Individuals</members>
+        <members>JGL_Member_Data_Migration__c.All</members>
+        <members>JournalSubType.All_JournalSubTypes</members>
+        <members>JournalSubType.All_JournalSubTypes</members>
+        <members>JournalType.All_JournalTypes</members>
+        <members>JournalType.All_JournalTypes</members>
+        
+        <members>Lead.AllOpenLeads</members>
+        <members>Lead.MyUnreadLeads</members>
+        <members>Lead.TodaysLeads</members>
+        <members>LocationTrustMeasure.AllLocationTrustMeasures</members>
+        <members>LoyaltyLedger.All_LoyaltyLedgers</members>
+        <members>LoyaltyLedger.All_LoyaltyLedgers</members>
+        <members>LoyaltyMemberCurrency.All_LoyaltyMemberCurrencies</members>
+        <members>LoyaltyMemberCurrency.All_LoyaltyMemberCurrencies</members>
+        <members>LoyaltyMemberTier.All_LoyaltyMemberTiers</members>
+        <members>LoyaltyMemberTier.All_LoyaltyMemberTiers</members>
+        <members>LoyaltyPartnerProduct.All_LoyaltyPartnerProducts</members>
+        <members>LoyaltyPartnerProduct.All_LoyaltyPartnerProducts</members>
+        <members>LoyaltyPgmEngmtAttrProm.All_LoyaltyPgmEngmtAttrProms</members>
+        <members>LoyaltyPgmEngmtAttrProm.All_LoyaltyPgmEngmtAttrProms</members>
+        <members>LoyaltyPgmEngmtAttribute.All_LoyaltyPgmEngmtAttributes</members>
+        <members>LoyaltyPgmEngmtAttribute.All_LoyaltyPgmEngmtAttributes</members>
+        <members>LoyaltyPgmGroupMbrRlnsp.All_LoyaltyPgmGroupMbrRlnsps</members>
+        <members>LoyaltyPgmGroupMbrRlnsp.All_LoyaltyPgmGroupMbrRlnsps</members>
+        <members>LoyaltyPgmMbrAttributeVal.All_LoyaltyPgmMbrAttributeVals</members>
+        <members>LoyaltyPgmMbrAttributeVal.All_LoyaltyPgmMbrAttributeVals</members>
+        <members>LoyaltyPgmMbrPromEligView.AllMemberPromotions</members>
+        <members>LoyaltyPgmMbrPromEligView.AllMemberPromotions</members>
+        <members>LoyaltyPgmMbrPromEligView.EnrollPromotionsDetailsListView</members>
+        <members>LoyaltyPgmMbrPromEligView.EnrollPromotionsDetailsListView</members>
+        <members>LoyaltyPgmMbrPromEligView.EnrollPromotionsListView</members>
+        <members>LoyaltyPgmMbrPromEligView.EnrollPromotionsListView</members>
+        <members>LoyaltyPgmMbrPromEligView.IneligiblePromotionsDetailsListView</members>
+        <members>LoyaltyPgmMbrPromEligView.IneligiblePromotionsDetailsListView</members>
+        <members>LoyaltyPgmMbrPromEligView.IneligiblePromotionsListView</members>
+        <members>LoyaltyPgmMbrPromEligView.IneligiblePromotionsListView</members>
+        <members>LoyaltyPgmMbrPromEligView.NotEnrolledPromotionsDetailsListView</members>
+        <members>LoyaltyPgmMbrPromEligView.NotEnrolledPromotionsDetailsListView</members>
+        <members>LoyaltyPgmMbrPromEligView.NotEnrolledPromotionsListView</members>
+        <members>LoyaltyPgmMbrPromEligView.NotEnrolledPromotionsListView</members>
+        <members>LoyaltyPgmPartnerPromotion.All_LoyaltyPgmPartnerPromotions</members>
+        <members>LoyaltyPgmPartnerPromotion.All_LoyaltyPgmPartnerPromotions</members>
+        <members>LoyaltyProgram.All_LoyaltyPrograms</members>
+        <members>LoyaltyProgram.All_LoyaltyPrograms</members>
+        <members>LoyaltyProgramBadge.All_LoyaltyProgramBadges</members>
+        <members>LoyaltyProgramBadge.All_LoyaltyProgramBadges</members>
+        <members>LoyaltyProgramCurrency.All_LoyaltyProgramCurrencies</members>
+        <members>LoyaltyProgramCurrency.All_LoyaltyProgramCurrencies</members>
+        <members>LoyaltyProgramMbrPromotion.All_LoyaltyProgramMbrPromotions</members>
+        <members>LoyaltyProgramMbrPromotion.All_LoyaltyProgramMbrPromotions</members>
+        <members>LoyaltyProgramMember.All_LoyaltyProgramMembers</members>
+        <members>LoyaltyProgramMember.All_LoyaltyProgramMembers</members>
+        <members>LoyaltyProgramMember.All_Members_AU</members>
+        <members>LoyaltyProgramMember.All_Members_NZ</members>
+        <members>LoyaltyProgramMemberBadge.All_LoyaltyProgramMemberBadges</members>
+        <members>LoyaltyProgramMemberBadge.All_LoyaltyProgramMemberBadges</members>
+        <members>LoyaltyProgramMemberCase.All_LoyaltyProgramMemberCases</members>
+        <members>LoyaltyProgramMemberCase.All_LoyaltyProgramMemberCases</members>
+        <members>LoyaltyProgramMemberMerge.All_LoyaltyProgramMemberMerges</members>
+        <members>LoyaltyProgramMemberMerge.All_LoyaltyProgramMemberMerges</members>
+        <members>LoyaltyProgramPartner.All_LoyaltyProgramPartners</members>
+        <members>LoyaltyProgramPartner.All_LoyaltyProgramPartners</members>
+        <members>LoyaltyTier.All_LoyaltyTiers</members>
+        <members>LoyaltyTier.All_LoyaltyTiers</members>
+        <members>LoyaltyTierBenefit.All_LoyaltyTierBenefits</members>
+        <members>LoyaltyTierBenefit.All_LoyaltyTierBenefits</members>
+        <members>LoyaltyTierGroup.All_LoyaltyTierGroups</members>
+        <members>LoyaltyTierGroup.All_LoyaltyTierGroups</members>
+        <members>MarketSegment.All_MarketSegments</members>
+        <members>MarketSegmentActivation.All_MarketSegmentActivations</members>
+        <members>MemberBenefit.All_MemberBenefits</members>
+        <members>MemberBenefit.All_MemberBenefits</members>
+        
+        
+        <members>Opportunity.AllOpportunities</members>
+        <members>Opportunity.ClosingNextMonth</members>
+        <members>Opportunity.ClosingThisMonth</members>
+        <members>Opportunity.Default_Opportunity_Pipeline</members>
+        <members>Opportunity.MyOpportunities</members>
+        <members>Opportunity.NewThisWeek</members>
+        <members>Opportunity.Won</members>
+        <members>Order.AllActivatedOrders</members>
+        <members>Order.AllDraftOrders</members>
+        <members>Order.AllOrders</members>
+        <members>PartyConsent.All_PartyConsents</members>
+        <members>Pricebook2.All_Price_Books</members>
+        <members>ProcessException.all_process_exceptions</members>
+        <members>ProcessException.all_process_exceptions</members>
+        <members>Product2.AllProducts</members>
+        <members>ProductAttributeDefinition.All_ProductAttributeDefinitions</members>
+        <members>ProductCatalog.All_Catalogs</members>
+        <members>ProductCategory.All_Categories</members>
+        <members>ProductCategory.Org_ProductCategory_Hierarchy</members>
+        <members>ProductCategoryDisqual.All_ProductCategoryDisquals</members>
+        <members>ProductCategoryQualification.All_ProductCategoryQualifications</members>
+        <members>ProductClassification.All_ProductClassifications</members>
+        <members>ProductClassificationAttr.All_ProductClassificationAttrs</members>
+        <members>ProductComponentGroup.All_ProductComponentGroups</members>
+        <members>ProductComponentGrpOverride.All_ProductComponentGrpOverrides</members>
+        <members>ProductDisqualification.All_ProductDisqualifications</members>
+        <members>ProductQualification.All_ProductQualifications</members>
+        <members>ProductRelComponentOverride.All_ProductRelComponentOverrides</members>
+        <members>ProductRelationshipType.AllProductRelationshipTypes</members>
+        <members>ProductSellingModel.All_ProductSellingModels</members>
+        <members>Promotion.All_Promotion</members>
+        <members>Promotion.All_Promotions</members>
+        <members>PromotionLoyaltyPtnrProdt.All_PromotionLoyaltyPtnrProdts</members>
+        <members>PromotionLoyaltyPtnrProdt.All_PromotionLoyaltyPtnrProdts</members>
+        <members>PromotionMarketSegment.All_PromotionMarketSegments</members>
+        <members>PromotionMarketSegment.All_PromotionMarketSegments</members>
+        
+        <members>Recommendation.All_Recommendations</members>
+        <members>RuntimeCatalogSnapshot.All_RuntimeCatalogSnapshots</members>
+        <members>RuntimeCatalogSnapshotIndex.All_RuntimeCatalogSnapshotIndexs</members>
+        
+        
+        
+        <members>TransactionJournal.All_TransactionJournals</members>
+        <members>TransactionJournal.All_TransactionJournals</members>
+        <members>TransactionJournal.All_Transaction_Journals</members>
+        <members>TransactionJournal.Sub_Type_Voucher</members>
+        <members>UnitOfMeasure.All_UnitOfMeasures</members>
+        <members>User.ActiveUsers</members>
+        <members>User.AdminUsers</members>
+        <members>User.AllUsers</members>
+        <members>User.JGL_Customer_Service</members>
+        <members>User.JGL_Service_Managers</members>
+        <members>Voucher.All_Rewards</members>
+        <members>VoucherDefinition.All_VoucherDefinitions</members>
+        
+        
+        <name>ListView</name>
+    </types>
+    <types>
+        <members>Just_Shop</members>
+        <name>LoyaltyProgramSetup</name>
+    </types>
+    <types>
+        <members>Account.Standard_Account_Match_Rule_v1_0</members>
+        <members>Account.Standard_PersonAccount_Match_Rule_v1_0</members>
+        <members>Contact.Standard_Contact_Match_Rule_v1_1</members>
+        <members>Lead.Standard_Lead_Match_Rule_v1_0</members>
+        <name>MatchingRule</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>MatchingRules</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>NamedCredential</name>
+    </types>
+    <types>
+        <members>NotificationTypeConfig</members>
+        <name>NotificationTypeConfig</name>
+    </types>
+    <types>
+        <members>Account_Home_map_Account_1724718547459</members>
+        <members>Account_Home_map_Account_Home_1724718196131</members>
+        <members>Account_Home_map_ContactPointAddress_1724718544282</members>
+        <members>Account_Home_map_ContactPointPhone_1724718552139</members>
+        
+        <members>BenefitType_Home_map_BenefitType_Home_1724718196233</members>
+        <members>BenefitType_Home_map_LoyaltyBenefitType_1724718595825</members>
+        <members>Benefit_Home_map_Benefit_Home_1724718196345</members>
+        <members>Benefit_Home_map_LoyaltyBenefit_1724718661326</members>
+        <members>Case_Home_map_Case_1724718575455</members>
+        <members>Case_Home_map_Case_Home_1724718196196</members>
+        <members>Contact_Home_map_AccountContact_1724718672297</members>
+        <members>Contact_Home_map_ContactPointAddress_1724718668640</members>
+        <members>Contact_Home_map_ContactPointEmail_1724718680477</members>
+        <members>Contact_Home_map_ContactPointPhone_1724718666168</members>
+        <members>Contact_Home_map_Contact_Home_1724718196354</members>
+        <members>Contact_Home_map_Individual_1724718677146</members>
+        <members>IndividualGDPRState_map_IndividualGDPRState_1722183086917</members>
+        <members>JournalSubType_Home_map_JournalSubType_Home_1724718196213</members>
+        <members>JournalSubType_Home_map_LoyaltyJournalSubtype_1724718586120</members>
+        <members>JournalType_Home_map_JournalType_Home_1724718196104</members>
+        <members>JournalType_Home_map_LoyaltyJournalType_1724718534838</members>
+        <members>LoyaltyAggrPointExprLedger_Home_map_LoyaltyAggrPointExprLedger_Home_1724718196306</members>
+        <members>LoyaltyAggrPointExprLedger_Home_map_LoyaltyAggregatedPointExpirationLedger_1724718642461</members>
+        <members>LoyaltyLedger_Home_map_LoyaltyLedger_1724718525325</members>
+        <members>LoyaltyLedger_Home_map_LoyaltyLedger_Home_1724718196088</members>
+        <members>LoyaltyLedger_Home_map_LoyaltyTransactionJournal_1724718528896</members>
+        <members>LoyaltyMemberCurrency_Home_map_LoyaltyMemberCurrency_1724718555575</members>
+        <members>LoyaltyMemberCurrency_Home_map_LoyaltyMemberCurrency_Home_1724718196147</members>
+        <members>LoyaltyMemberTier_Home_map_LoyaltyMemberTier_1724718623002</members>
+        <members>LoyaltyMemberTier_Home_map_LoyaltyMemberTier_Home_1724718196282</members>
+        <members>LoyaltyPartnerProduct_Home_map_LoyaltyPartnerProduct_1724718531334</members>
+        <members>LoyaltyPartnerProduct_Home_map_LoyaltyPartnerProduct_Home_1724718196096</members>
+        <members>LoyaltyPgmEngmtAttrProm_Home_map_LoyaltyPgmEngmtAttrProm_Home_1724718196274</members>
+        <members>LoyaltyPgmEngmtAttrProm_Home_map_LoyaltyProgramEngmtAttributePromotion_1724718619740</members>
+        <members>LoyaltyPgmEngmtAttribute_Home_map_LoyaltyPgmEngmtAttribute_Home_1724718196205</members>
+        <members>LoyaltyPgmEngmtAttribute_Home_map_LoyaltyProgramEngagementAttribute_1724718580826</members>
+        <members>LoyaltyPgmGroupMbrRlnsp_Home_map_LoyaltyPgmGroupMbrRlnsp_Home_1724718196041</members>
+        <members>LoyaltyPgmGroupMbrRlnsp_Home_map_LoyaltyProgramGroupMemberRelationship_1724718499729</members>
+        <members>LoyaltyPgmMbrAttributeVal_Home_map_LoyaltyPgmMbrAttributeVal_Home_1724718196291</members>
+        <members>LoyaltyPgmMbrAttributeVal_Home_map_LoyaltyProgramMemberAttributeValue_1724718627350</members>
+        <members>LoyaltyPgmPartnerPromotion_Home_map_LoyaltyPgmPartnerPromotion_Home_1724718196263</members>
+        <members>LoyaltyPgmPartnerPromotion_Home_map_LoyaltyProgramPartnerPromotion_1724718615765</members>
+        <members>LoyaltyProgramBadge_Home_map_LoyaltyProgramBadge_1724718685461</members>
+        <members>LoyaltyProgramBadge_Home_map_LoyaltyProgramBadge_Home_1724718196363</members>
+        <members>LoyaltyProgramCurrency_Home_map_LoyaltyProgramCurrency_1724718599330</members>
+        <members>LoyaltyProgramCurrency_Home_map_LoyaltyProgramCurrency_Home_1724718196241</members>
+        <members>LoyaltyProgramMbrPromotion_Home_map_LoyaltyProgramMbrPromotion_Home_1724718196177</members>
+        <members>LoyaltyProgramMbrPromotion_Home_map_LoyaltyProgramMemberPromotion_1724718567904</members>
+        <members>LoyaltyProgramMemberBadge_Home_map_LoyaltyProgramMemberBadge_1724718592197</members>
+        <members>LoyaltyProgramMemberBadge_Home_map_LoyaltyProgramMemberBadge_Home_1724718196226</members>
+        <members>LoyaltyProgramMemberCase_Home_map_LoyaltyProgramMemberCase_1724718651210</members>
+        <members>LoyaltyProgramMemberCase_Home_map_LoyaltyProgramMemberCase_Home_1724718196328</members>
+        <members>LoyaltyProgramMember_Home_map_LoyaltyProgramMember_1724718654543</members>
+        <members>LoyaltyProgramMember_Home_map_LoyaltyProgramMember_Home_1724718196336</members>
+        <members>LoyaltyProgramPartner_Home_map_LoyaltyProgramPartner_1724718646284</members>
+        <members>LoyaltyProgramPartner_Home_map_LoyaltyProgramPartner_Home_1724718196315</members>
+        <members>LoyaltyProgram_Home_map_LoyaltyProgram_1724718589016</members>
+        <members>LoyaltyProgram_Home_map_LoyaltyProgram_Home_1724718196219</members>
+        <members>LoyaltyTierBenefit_Home_map_LoyaltyTierBenefit_1724718537910</members>
+        <members>LoyaltyTierBenefit_Home_map_LoyaltyTierBenefit_Home_1724718196112</members>
+        <members>LoyaltyTierGroup_Home_map_LoyaltyTierGroup_1724718515249</members>
+        <members>LoyaltyTierGroup_Home_map_LoyaltyTierGroup_Home_1724718196070</members>
+        <members>LoyaltyTier_Home_map_LoyaltyTier_1724718690094</members>
+        <members>LoyaltyTier_Home_map_LoyaltyTier_Home_1724718196372</members>
+        
+        <members>MemberBenefit_Home_map_MemberBenefit_1724718563989</members>
+        <members>MemberBenefit_Home_map_MemberBenefit_Home_1724718196167</members>
+        <members>Product2_Home_map_Product2_Home_1724718196186</members>
+        <members>Product2_Home_map_Product_1724718571768</members>
+        <members>ProductCategory_Home_map_ProductCategory_1724718504531</members>
+        <members>ProductCategory_Home_map_ProductCategory_Home_1724718196052</members>
+        <members>PromotionLoyaltyPtnrProdt_Home_map_PromotionLoyaltyPartnerProduct_1724718604848</members>
+        <members>PromotionLoyaltyPtnrProdt_Home_map_PromotionLoyaltyPtnrProdt_Home_1724718196248</members>
+        <members>PromotionMarketSegment_Home_map_PromotionMarketSegment_1724718540944</members>
+        <members>PromotionMarketSegment_Home_map_PromotionMarketSegment_Home_1724718196120</members>
+        <members>Promotion_Home_map_Promotion_1724718509158</members>
+        <members>Promotion_Home_map_Promotion_Home_1724718196062</members>
+        <members>SingleCurrency_00DHp0000033eq7_251B38F2_map_SingleCurrency_00DHp0000033eq7_251B38F2_1727199394034</members>
+        <members>StaticCurrencyRates_00DHp0000033eq7_map_StaticCurrencyRates_00DHp0000033eq7_1727200499414</members>
+        
+        <members>TransactionJournal_Home_map_LoyaltyTransactionJournal_1724718632502</members>
+        <members>TransactionJournal_Home_map_TransactionJournal_Home_1724718196298</members>
+        <members>UnitOfMeasure_Home_map_UnitOfMeasure_1724718560913</members>
+        <members>UnitOfMeasure_Home_map_UnitOfMeasure_Home_1724718196157</members>
+        <members>VoucherDefinition_Home_map_VoucherDefinition_1724718693710</members>
+        <members>VoucherDefinition_Home_map_VoucherDefinition_Home_1724718196379</members>
+        <members>Voucher_Home_map_Voucher_1724718608848</members>
+        <members>Voucher_Home_map_Voucher_Home_1724718196255</members>
+        
+        <name>ObjectSourceTargetMap</name>
+    </types>
+    <types>
+        <members>Default_Opportunity</members>
+        <name>PathAssistant</name>
+    </types>
+    <types>
+        <members>JGL_API_Integration_Access</members>
+        <members>JGL_Admin_Access</members>
+        <members>JGL_CSA_Edit_Access_Core</members>
+        <members>JGL_CSA_Manager_Loyalty_Access</members>
+        <members>JGL_CSA_Read_Only_Core</members>
+        <members>JGL_CSA_Read_Only_Loyalty_Access</members>
+        <members>JGL_CSA_manager_Core</members>
+        <members>JGL_Integration_Access</members>
+        <members>JGL_Loyalty_Access</members>
+        <members>JGL_Marketing_Cloud_Access</members>
+        <members>JGL_Password_No_Expiration</members>
+        <members>MFA_Admin_UI</members>
+        
+        
+        
+        <members>sfdcInternalInt__sfdc_a360</members>
+        <members>sfdcInternalInt__sfdc_a360_sfcrm_data_extract</members>
+        <members>sfdcInternalInt__sfdc_scrt2</members>
+        <name>PermissionSet</name>
+    </types>
+    <types>
+        <members>JGL_Admin_PSG</members>
+        <members>JGL_CSA_Manager_Edit_Access</members>
+        <members>JGL_CSA_Read_Only</members>
+        <members>JGL_Integration_PSG</members>
+        <members>force__ScaleCenterUsers</members>
+        <name>PermissionSetGroup</name>
+    </types>
+    <types>
+        <members>IndirectIssueVoucherEventTriggerConfig</members>
+        <members>IssueVoucherEventTriggerConfig</members>
+        <members>MemberEnrolEventTriggerConfig</members>
+        <members>MemberUpdateEventTriggerConfig</members>
+        <members>ProcessRewardsEventTriggerConfig</members>
+        <name>PlatformEventSubscriberConfig</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>PresenceDeclineReason</name>
+    </types>
+    <types>
+        <members>Admin</members>
+        <members>Analytics Cloud Integration User</members>
+        <members>Analytics Cloud Security User</members>
+        <members>CPQ Integration User</members>
+        <members>Chatter External User</members>
+        <members>Chatter Free User</members>
+        <members>Chatter Moderator User</members>
+        <members>ContractManager</members>
+        <members>Data Cloud Admin</members>
+        <members>Data Cloud Power User</members>
+        <members>Guest License User</members>
+        <members>Identity User</members>
+        <members>JGL Baseline</members>
+        <members>JGL Customer Service</members>
+        <members>JGL Customer Service Manager</members>
+        <members>JGL Integration</members>
+        <members>MarketingProfile</members>
+        <members>Minimum Access - API Only Integrations</members>
+        <members>Minimum Access - Salesforce</members>
+        <members>Read Only</members>
+        <members>Salesforce API Only System Integrations</members>
+        <members>SolutionManager</members>
+        <members>Standard</members>
+        <name>Profile</name>
+    </types>
+    <types>
+        <members>Account.Child_Account</members>
+        <members>Campaign.Child_Campaign</members>
+        <members>Case.Change_Priority</members>
+        <members>Case.Close_the_Case</members>
+        <members>Case.NewChildCase</members>
+        <members>Case.SendEmail</members>
+        <members>Case.SocialPublisher</members>
+        <members>CollaborationGroup.NewGroupMember</members>
+        <members>CollaborationGroup.NewGroupRecord</members>
+        <members>FeedItem.NewTaskFromFeedItem</members>
+        <members>Follow_Up</members>
+        <members>LogACall</members>
+        <members>NewAccount</members>
+        <members>NewCase</members>
+        <members>NewContact</members>
+        <members>NewEvent</members>
+        <members>NewGroup</members>
+        <members>NewLead</members>
+        <members>NewOpportunity</members>
+        <members>NewTask</members>
+        
+        
+        <name>QuickAction</name>
+    </types>
+    <types>
+        <members>Account.Business_Account</members>
+        <members>Account.PersonAccount</members>
+        
+        
+        <name>RecordType</name>
+    </types>
+    <types>
+        <members>ET4AE5_MCC_TokenService</members>
+        <members>JustGroupServices</members>
+        <members>MetadataAPI</members>
+        <members>TenantSpecificAuth_mcb01cykd7r27g7kfv2sb</members>
+        <members>TenantSpecificLegacy_mcb01cykd7r27g7kfv2</members>
+        <members>TenantSpecificRest_mcb01cykd7r27g7kfv2sb</members>
+        <members>TenantSpecificSoap_mcb01cykd7r27g7kfv2sb</members>
+        <members>TenantSpecificToken_mcb01cykd7r27g7kfv2s</members>
+        
+        <name>RemoteSiteSetting</name>
+    </types>
+    <types>
+        <members>LoyaltyReports/Loyalty_Members_tqp</members>
+        <members>LoyaltyReports/Loyalty_Program_Voucher_Definition_SwR</members>
+        
+        
+        <name>Report</name>
+    </types>
+    <types>
+        <members>Loyalty_Program_Members</members>
+        
+        <members>Voucher_Definition_with_Vouchers</members>
+        <members>flow_orchestration_log_ootb_crt_two_four_eight</members>
+        <members>flow_orchestration_run_ootb_crt_two_four_eight</members>
+        <members>flow_orchestration_stage_run_ootb_crt_two_four_eight</members>
+        <members>flow_orchestration_step_run_ootb_crt_two_four_eight</members>
+        <members>flow_orchestration_work_item_ootb_crt_two_four_eight</members>
+        <members>screen_flows_prebuilt_crt</members>
+        <name>ReportType</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>Settings</name>
+    </types>
+    <types>
+        <members>VoucherDefinition.Share_Promo_Category_with_CSA</members>
+        <name>SharingCriteriaRule</name>
+    </types>
+    <types>
+        <members>Account.Internal_Admin_Edit</members>
+        <members>Account.Share_RW_With_All_Internal_Users</members>
+        <members>JournalType.Share_with_Service_Manager</members>
+        <members>LoyaltyProgramMember.Internal_Admin_Edit</members>
+        <members>LoyaltyProgramMember.Share_RW_With_All_Internal_Users</members>
+        <members>Promotion.Share_RW_With_All_Internal_Users</members>
+        <members>Voucher.Customer_Service_Manager_Edit</members>
+        <members>Voucher.Internal_Admin_Edit</members>
+        <members>Voucher.Share_RW_With_All_Internal_Users</members>
+        <members>VoucherDefinition.All_Internal_Share_with_Admins</members>
+        <name>SharingOwnerRule</name>
+    </types>
+    <types>
+        <members>Account</members>
+        <members>Accrual_Purchase_Multiplier__c</members>
+        <members>ActivationTarget</members>
+        <members>ActivationTargetPlatform</members>
+        <members>ActivationTrgtIntOrgAccess</members>
+        <members>ActivityRecurrence2</members>
+        <members>ActivityRecurrence2Exception</members>
+        <members>ActvTgtPlatformFieldValue</members>
+        <members>AgentWork</members>
+        <members>AiEvaluation</members>
+        <members>AiPromptBuilderGenResult</members>
+        <members>Asset</members>
+        <members>AssistantInteraction</members>
+        <members>AssistantProgress</members>
+        <members>AssistantRecommendation</members>
+        <members>AsyncOperationTracker</members>
+        <members>AttachmentArticle</members>
+        <members>AttrPicklistExcludedValue</members>
+        <members>AttributeCategory</members>
+        <members>AttributeCategoryAttribute</members>
+        <members>AttributeDefinition</members>
+        <members>AttributePicklist</members>
+        <members>AuthorizationForm</members>
+        <members>AuthorizationFormConsent</members>
+        <members>AuthorizationFormDataUse</members>
+        <members>BatchJob</members>
+        <members>BenefitType</members>
+        <members>BusinessBrand</members>
+        <members>CalculationMatrix</members>
+        <members>CalculationProcedure</members>
+        <members>CalendarModel</members>
+        <members>CalendarView</members>
+        <members>Campaign</members>
+        <members>Case</members>
+        <members>CommSubscription</members>
+        <members>CommSubscriptionChannelType</members>
+        <members>CommSubscriptionConsent</members>
+        <members>ComponentResponseCache</members>
+        <members>Contact</members>
+        <members>ContactPointConsent</members>
+        <members>ContactPointTypeConsent</members>
+        <members>ContactRequest</members>
+        <members>ConvCoachingRecommendation</members>
+        <members>Customer</members>
+        <members>DTRecordsetReplica</members>
+        <members>DataActionJobSummary</members>
+        <members>DataActionTarget</members>
+        <members>DataCommCapActvTarget</members>
+        <members>DataKitDeploymentLog</members>
+        <members>DataPackageKit</members>
+        <members>DataPrepServiceLocator</members>
+        <members>DataQueryWorkspace</members>
+        <members>DataSourceBundle</members>
+        <members>DataUseLegalBasis</members>
+        <members>DataUsePurpose</members>
+        <members>DecisionTblFileImportData</members>
+        <members>DialerCallUsage</members>
+        <members>EngagementChannelType</members>
+        <members>ExchangeUserMapping</members>
+        <members>ExpressionSet</members>
+        <members>ExtDataShareTarget</members>
+        <members>ExternalEventMapping</members>
+        <members>FlowInterview</members>
+        <members>FlowInterviewLog</members>
+        <members>FlowOrchestrationInstance</members>
+        <members>FlowOrchestrationStageInstance</members>
+        <members>FlowOrchestrationStepInstance</members>
+        <members>FlowOrchestrationWorkItem</members>
+        <members>FlowRecord</members>
+        <members>FlowTestResult</members>
+        <members>GameDefinition</members>
+        <members>GameParticipant</members>
+        <members>Image</members>
+        <members>Individual</members>
+        <members>JGL_Member_Data_Migration__c</members>
+        <members>JournalType</members>
+        <members>Lead</members>
+        <members>LearningItem</members>
+        <members>ListEmail</members>
+        <members>Location</members>
+        <members>LocationTrustMeasure</members>
+        <members>LoyaltyProgram</members>
+        <members>LoyaltyProgramMember</members>
+        <members>LoyaltyProgramMemberCase</members>
+        <members>LoyaltyProgramMemberMerge</members>
+        <members>LoyaltyProgramPartner</members>
+        <members>LoyaltyProgramProcess</members>
+        <members>LoyaltyProgramWidget</members>
+        
+        <members>NotifDeliveryUserPref</members>
+        <members>ObjectDataImport</members>
+        
+        <members>Order</members>
+        <members>PartyConsent</members>
+        <members>PendingServiceRouting</members>
+        <members>ProcessException</members>
+        <members>Product2</members>
+        <members>ProductAttributeDefinition</members>
+        <members>ProductCatalog</members>
+        <members>ProductCategoryDisqual</members>
+        <members>ProductCategoryQualification</members>
+        <members>ProductClassification</members>
+        <members>ProductClassificationAttr</members>
+        <members>ProductComponentGroup</members>
+        <members>ProductComponentGrpOverride</members>
+        <members>ProductDisqualification</members>
+        <members>ProductQualification</members>
+        <members>ProductRelComponentOverride</members>
+        <members>ProfileSkill</members>
+        <members>Promotion</members>
+        <members>PromptAction</members>
+        <members>PromptError</members>
+        
+        <members>RuleLibrary</members>
+        
+        <members>UnitOfMeasure</members>
+        <members>User</members>
+        
+        <members>Voucher</members>
+        <members>VoucherDefinition</members>
+        <members>Wallet_Service_Log__c</members>
+        
+        
+        <name>SharingRules</name>
+    </types>
+    <types>
+        <members>TrustCardsTheme</members>
+        
+        <members>mobileLandingImage</members>
+        <members>mobileLanding__mobileLandingImage</members>
+        <name>StaticResource</name>
+    </types>
+    <types>
+        <members>Account</members>
+        <members>Accrual_Purchase_Multiplier__c</members>
+        <members>Asset</members>
+        <members>Campaign</members>
+        <members>Case</members>
+        <members>Contact</members>
+        <members>ContentDocument</members>
+        <members>Contract</members>
+        <members>Event</members>
+        <members>JGL_Member_Data_Migration__c</members>
+        <members>Lead</members>
+        <members>Opportunity</members>
+        <members>Order</members>
+        <members>ServiceResource</members>
+        <members>Solution</members>
+        <members>Task</members>
+        <members>Wallet_Service_Log__c</members>
+        <members>WorkOrder</members>
+        <members>WorkOrderLineItem</members>
+        
+        <name>TopicsForObjects</name>
+    </types>
+    <types>
+        <members>LoyaltyProgramMember.CSA_Rep_and_Manager_Field_Validation</members>
+        <name>ValidationRule</name>
+    </types>
+    <types>
+        <members>Account.GoogleMaps</members>
+        <members>Account.GoogleNews</members>
+        <members>Account.GoogleSearch</members>
+        
+        <members>Campaign.ViewAllCampaignMembers</members>
+        <members>Campaign.ViewCampaignInfluenceReport</members>
+        
+        <members>Contact.GoogleMaps</members>
+        <members>Contact.GoogleSearch</members>
+        
+        <members>Lead.GoogleMaps</members>
+        <members>Lead.GoogleNews</members>
+        <members>Lead.GoogleSearch</members>
+        
+        
+        <name>WebLink</name>
+    </types>
+    <types>
+        <members>Case</members>
+        <name>Workflow</name>
+    </types>
+    <types>
+        <members>Case.ChangePriorityToHigh</members>
+        <name>WorkflowFieldUpdate</name>
+    </types>
+	<types>
+		<members>*</members>
+		
+		<name>CustomField</name>
+	</types>
+	<version>60.0</version>
+</Package>

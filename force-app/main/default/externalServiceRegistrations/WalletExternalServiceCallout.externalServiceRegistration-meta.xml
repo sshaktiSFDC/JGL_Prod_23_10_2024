@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExternalServiceRegistration xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>WalletExternalServiceCallout</label>
+    <namedCredentialReference>Wallet_Service</namedCredentialReference>
+    <operations>
+        <active>true</active>
+        <name>postwalletlinks</name>
+    </operations>
+    <registrationProviderType>Custom</registrationProviderType>
+    <schema>{
+  &quot;openapi&quot;: &quot;3.0.1&quot;,
+  &quot;info&quot;: {
+    &quot;title&quot;: &quot;WalletExternalServiceCallout&quot;,
+    &quot;description&quot;: &quot;&quot;
+  },
+  &quot;paths&quot;: {
+    &quot;/get-wallet-links/{memberno}&quot;: {
+      &quot;post&quot;: {
+        &quot;description&quot;: &quot;&quot;,
+        &quot;operationId&quot;: &quot;POSTwalletLinks&quot;,
+        &quot;parameters&quot;: [{
+          &quot;name&quot;: &quot;memberno&quot;,
+          &quot;in&quot;: &quot;path&quot;,
+          &quot;description&quot;: &quot;&quot;,
+          &quot;required&quot;: true,
+          &quot;allowEmptyValue&quot;: false,
+          &quot;schema&quot;: {
+            &quot;type&quot;: &quot;string&quot;
+          }
+        }],
+        &quot;requestBody&quot;: {
+          &quot;description&quot;: &quot;Sample Request body&quot;,
+          &quot;content&quot;: {
+            &quot;application/json&quot;: {
+              &quot;schema&quot;: {
+                &quot;type&quot;: &quot;object&quot;,
+                &quot;properties&quot;: {
+                  &quot;membershipNumber&quot;: {
+                    &quot;type&quot;: &quot;string&quot;
+                  },
+                  &quot;orgId&quot;: {
+                    &quot;type&quot;: &quot;string&quot;
+                  },
+                  &quot;lastName&quot;: {
+                    &quot;type&quot;: &quot;string&quot;
+                  },
+                  &quot;firstName&quot;: {
+                    &quot;type&quot;: &quot;string&quot;
+                  },
+                  &quot;nextRewardPoints&quot;: {
+                    &quot;type&quot;: &quot;integer&quot;,
+                    &quot;format&quot;: &quot;int64&quot;
+                  },
+                  &quot;totalRewards&quot;: {
+                    &quot;type&quot;: &quot;integer&quot;,
+                    &quot;format&quot;: &quot;int64&quot;
+                  },
+                  &quot;memberId&quot;: {
+                    &quot;type&quot;: &quot;string&quot;
+                  }
+                }
+              }
+            }
+          },
+          &quot;required&quot;: true
+        },
+        &quot;responses&quot;: {
+          &quot;2XX&quot;: {
+            &quot;description&quot;: &quot;Generated Response&quot;,
+            &quot;content&quot;: {
+              &quot;application/json&quot;: {
+                &quot;schema&quot;: {
+                  &quot;type&quot;: &quot;object&quot;,
+                  &quot;properties&quot;: {
+                    &quot;membershipNumber&quot;: {
+                      &quot;type&quot;: &quot;string&quot;
+                    },
+                    &quot;appleWalletLink&quot;: {
+                      &quot;type&quot;: &quot;string&quot;
+                    },
+                    &quot;googleWalletLink&quot;: {
+                      &quot;type&quot;: &quot;string&quot;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}</schema>
+    <schemaType>OpenApi3</schemaType>
+    <serviceBinding>{&quot;host&quot;:&quot;&quot;,&quot;basePath&quot;:&quot;/&quot;,&quot;allowedSchemes&quot;:[],&quot;requestMediaTypes&quot;:[],&quot;responseMediaTypes&quot;:[],&quot;compatibleMediaTypes&quot;:{}}</serviceBinding>
+    <status>Complete</status>
+    <systemVersion>5</systemVersion>
+</ExternalServiceRegistration>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TR_Promotion__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Flag to disable trigger logic for Promotion object only</description>
+    <externalId>false</externalId>
+    <label>TR Promotion</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

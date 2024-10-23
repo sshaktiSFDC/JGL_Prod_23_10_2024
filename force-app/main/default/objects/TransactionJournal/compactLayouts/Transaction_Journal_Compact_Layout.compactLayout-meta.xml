@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Transaction_Journal_Compact_Layout</fullName>
+    <fields>Name</fields>
+    <fields>MemberId</fields>
+    <fields>ActivityDate</fields>
+    <fields>Brand</fields>
+    <fields>Channel</fields>
+    <fields>TransactionAmount</fields>
+    <fields>Order_ID__c</fields>
+    <fields>Order_Item_ID__c</fields>
+    <fields>Status</fields>
+    <label>Transaction Journal Compact Layout</label>
+</CompactLayout>

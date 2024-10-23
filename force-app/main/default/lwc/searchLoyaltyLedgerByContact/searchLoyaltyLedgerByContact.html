@@ -1,0 +1,53 @@
+<template>
+    <lightning-layout class="slds-var-m-around_medium" multiple-rows>
+        <template lwc:if={isMembershipDetailsLoading}>
+            <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+        </template>
+        <lightning-layout-item class="slds-var-p-around_small" size="12">
+            <div style="font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem;">Membership Details</div>
+        </lightning-layout-item>
+        <lightning-layout-item class="slds-var-p-around_small" flexibility="auto">
+            <span class="slds-text-title">Membership Number</span>
+            <span class="slds-text-body_regular slds-m-left_x-small">{membershipDetailModel.membershipNumber}</span>
+        </lightning-layout-item>
+        <lightning-layout-item class="slds-var-p-around_small" flexibility="auto">
+            <span class="slds-text-title">Total Rewards</span>
+            <span class="slds-text-body_regular slds-m-left_x-small">{membershipDetailModel.totalRewards}</span>
+        </lightning-layout-item>
+        <lightning-layout-item class="slds-var-p-around_small" flexibility="auto">
+            <span class="slds-text-title">Points Balance</span>
+            <span class="slds-text-body_regular slds-m-left_x-small">{membershipDetailModel.pointsBalance}</span>
+        </lightning-layout-item>
+    </lightning-layout>
+    <lightning-layout class="slds-var-m-around_medium" multiple-rows>
+        <template lwc:if={isDataLoading}>
+            <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+        </template>
+
+        <lightning-layout-item class="slds-var-p-around_small" size="5">
+            <lightning-input type="text" label="Receipt No" name="receiptNo" value={formModel.receiptNo} onchange={handleFieldChange}></lightning-input>
+        </lightning-layout-item>
+        <lightning-layout-item class="slds-var-p-around_small slds-align_absolute-center" size="2">
+            OR
+        </lightning-layout-item>
+        <lightning-layout-item class="slds-var-p-around_small" size="5">
+            <lightning-input type="text" label="Order Number" name="orderNumber" value={formModel.orderNumber} onchange={handleFieldChange}></lightning-input>
+        </lightning-layout-item>
+        <br>
+        <lightning-layout-item class="slds-var-p-around_small slds-align_absolute-center" size="2">
+            OR
+        </lightning-layout-item>
+        <lightning-layout-item class="slds-var-p-around_small" size="5">
+            <lightning-input type="date" label="From" name="fromDate" value={formModel.fromDate} onchange={handleFieldChange}></lightning-input>
+        </lightning-layout-item>
+        <lightning-layout-item class="slds-var-p-around_small" size="5">
+            <lightning-input type="date" label="To" name="toDate" value={formModel.toDate} onchange={handleFieldChange}></lightning-input>
+        </lightning-layout-item>
+        <lightning-layout-item class="slds-var-p-around_small slds-text-align_center" size="12">
+            <lightning-button variant="brand" label="Search" title="Search" onclick={handleSearchLoyaltyLedgerRecords}></lightning-button>
+        </lightning-layout-item>
+        <lightning-layout-item class="slds-var-p-top_medium slds-var-p-horizontal_medium" size="12">
+            <lightning-datatable key-field="id" columns={columns} data={tableData} is-loading={isDataLoading} hide-checkbox-column></lightning-datatable>
+        </lightning-layout-item>
+    </lightning-layout>
+</template>

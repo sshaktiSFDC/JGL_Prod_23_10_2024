@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>this runs DPE definition to find empty wallet links records and update the field to trigger PE</description>
+        <name>Run_DPE_Detect_Empty_Wallet_Links</name>
+        <label>Run DPE Detect Empty Wallet Links</label>
+        <locationX>176</locationX>
+        <locationY>252</locationY>
+        <actionName>Detect_Empty_Wallet_Links</actionName>
+        <actionType>dataProcessingEngineAction</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <nameSegment>Detect_Empty_Wallet_Links</nameSegment>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>61.0</apiVersion>
+    <environments>Default</environments>
+    <formulas>
+        <name>UnixTimeNOW</name>
+        <dataType>String</dataType>
+        <expression>TEXT(UNIXTIMESTAMP(NOW()))</expression>
+    </formulas>
+    <interviewLabel>[Schedule] Daily Check Wallet Links {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>[Schedule] Daily Check and Update Wallet Links</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Run_DPE_Detect_Empty_Wallet_Links</targetReference>
+        </connector>
+        <schedule>
+            <frequency>Daily</frequency>
+            <startDate>2024-09-19</startDate>
+            <startTime>19:00:00.000Z</startTime>
+        </schedule>
+        <triggerType>Scheduled</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

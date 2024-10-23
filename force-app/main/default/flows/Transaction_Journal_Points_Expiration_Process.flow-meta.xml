@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Run_Program_Process</name>
+        <label>Run Program Process</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <actionName>runProgramProcessForTransactionJournal</actionName>
+        <actionType>runProgramProcessForTransactionJournal</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>transactionJournalId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>runProgramProcessForTransactionJournal</nameSegment>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>60.0</apiVersion>
+    <description>Record-triggered flow on Transaction Journal to process Journal Type = Points Expiration</description>
+    <environments>Default</environments>
+    <interviewLabel>[Transaction Journal] Points Expiration Process {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>[Transaction Journal] Points Expiration Process</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Run_Program_Process</targetReference>
+        </connector>
+        <filterFormula>AND(NOT({!$Setup.Bypass_Automation__c.FL_Transaction_Journal__c}), {!$Record.JournalType.Name}==&quot;Points Expiration&quot;)</filterFormula>
+        <object>TransactionJournal</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

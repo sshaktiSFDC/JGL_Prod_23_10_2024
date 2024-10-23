@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>this is published to signal new member creation/enrolment to handle wallet links population</description>
+    <eventType>HighVolume</eventType>
+    <label>Member Enrol Event</label>
+    <pluralLabel>Member Enrol Events</pluralLabel>
+    <publishBehavior>PublishAfterCommit</publishBehavior>
+</CustomObject>

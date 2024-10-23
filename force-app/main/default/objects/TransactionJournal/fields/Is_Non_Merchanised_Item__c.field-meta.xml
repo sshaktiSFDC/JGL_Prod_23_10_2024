@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_Non_Merchanised_Item__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Flag to indicate whether transaction journal is associated with Non-merchandised item or not. Non-merchandise SKUs that do not qualify for points.</description>
+    <externalId>false</externalId>
+    <label>Is Non-Merchanised Item</label>
+    <type>Checkbox</type>
+</CustomField>

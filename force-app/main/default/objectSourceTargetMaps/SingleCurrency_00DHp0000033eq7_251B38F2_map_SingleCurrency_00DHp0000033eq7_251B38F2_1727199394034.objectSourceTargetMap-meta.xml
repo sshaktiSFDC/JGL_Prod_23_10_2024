@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ObjectSourceTargetMap xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <creationType>Custom</creationType>
+    <fieldSourceTargetMaps>
+        <creationType>Custom</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>false</isSourceFormula>
+        <sourceField>SingleCurrency_00DHp0000033eq7_251B38F2.IsoCode__c</sourceField>
+        <sourceFormula>IsoCode</sourceFormula>
+        <targetField>SingleCurrency_00DHp0000033eq7_251B38F2__dll.IsoCode__c</targetField>
+    </fieldSourceTargetMaps>
+    <fieldSourceTargetMaps>
+        <creationType>System</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>true</isSourceFormula>
+        <sourceField xsi:nil="true"/>
+        <sourceFormula>&quot;SingleCurrency_00DHp0000033eq7_2b093b73_6e77_4da6_a653_70ac6b99945a&quot;</sourceFormula>
+        <targetField>SingleCurrency_00DHp0000033eq7_251B38F2__dll.DataSource__c</targetField>
+    </fieldSourceTargetMaps>
+    <fieldSourceTargetMaps>
+        <creationType>System</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>true</isSourceFormula>
+        <sourceField xsi:nil="true"/>
+        <sourceFormula>&quot;SingleCurrency_00DHp0000033eq7_CurrencyType_251B38F2&quot;</sourceFormula>
+        <targetField>SingleCurrency_00DHp0000033eq7_251B38F2__dll.DataSourceObject__c</targetField>
+    </fieldSourceTargetMaps>
+    <fieldSourceTargetMaps>
+        <creationType>Custom</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>false</isSourceFormula>
+        <sourceField>SingleCurrency_00DHp0000033eq7_251B38F2.Id__c</sourceField>
+        <sourceFormula>Id</sourceFormula>
+        <targetField>SingleCurrency_00DHp0000033eq7_251B38F2__dll.Id__c</targetField>
+    </fieldSourceTargetMaps>
+    <fieldSourceTargetMaps>
+        <creationType>Custom</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>false</isSourceFormula>
+        <sourceField>SingleCurrency_00DHp0000033eq7_251B38F2.ConversionRate__c</sourceField>
+        <sourceFormula>ConversionRate</sourceFormula>
+        <targetField>SingleCurrency_00DHp0000033eq7_251B38F2__dll.ConversionRate__c</targetField>
+    </fieldSourceTargetMaps>
+    <masterLabel>SingleCurrency_00DHp0000033eq7_251B38F2_map_SingleCurrency_00DHp0000033eq7_251B38F2_1727199394034</masterLabel>
+    <sourceObjectName>SingleCurrency_00DHp0000033eq7_251B38F2</sourceObjectName>
+    <targetObjectName>SingleCurrency_00DHp0000033eq7_251B38F2__dll</targetObjectName>
+</ObjectSourceTargetMap>

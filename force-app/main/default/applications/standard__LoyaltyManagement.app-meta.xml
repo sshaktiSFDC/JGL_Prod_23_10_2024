@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#F1070A</headerColor>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <description>Manage and track your loyalty programs, partners, experiences, members, and member activities.</description>
+    <formFactors>Small</formFactors>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <isOmniPinnedViewEnabled>false</isOmniPinnedViewEnabled>
+    <label>Loyalty Console</label>
+    <navType>Console</navType>
+    <setupExperience>all</setupExperience>
+    <tabs>standard-home</tabs>
+    <tabs>standard-LoyaltyProgram</tabs>
+    <tabs>standard-LoyaltyProgramMember</tabs>
+    <tabs>standard-TransactionJournal</tabs>
+    <tabs>standard-WaveHomeLightning</tabs>
+    <tabs>standard-Campaign</tabs>
+    <tabs>standard-Event</tabs>
+    <tabs>standard-Forecasting3</tabs>
+    <tabs>Loyalty_Search</tabs>
+    <uiType>Lightning</uiType>
+    <workspaceConfig>
+        <mappings>
+            <tab>Loyalty_Search</tab>
+        </mappings>
+        <mappings>
+            <tab>standard-Campaign</tab>
+        </mappings>
+        <mappings>
+            <tab>standard-Event</tab>
+        </mappings>
+        <mappings>
+            <tab>standard-Forecasting3</tab>
+        </mappings>
+        <mappings>
+            <tab>standard-LoyaltyProgram</tab>
+        </mappings>
+        <mappings>
+            <tab>standard-LoyaltyProgramMember</tab>
+        </mappings>
+        <mappings>
+            <tab>standard-TransactionJournal</tab>
+        </mappings>
+        <mappings>
+            <tab>standard-WaveHomeLightning</tab>
+        </mappings>
+        <mappings>
+            <tab>standard-home</tab>
+        </mappings>
+    </workspaceConfig>
+</CustomApplication>

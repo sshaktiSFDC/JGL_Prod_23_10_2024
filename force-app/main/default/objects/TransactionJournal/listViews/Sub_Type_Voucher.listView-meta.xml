@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_Type_Voucher</fullName>
+    <columns>Name</columns>
+    <columns>ActivityDate</columns>
+    <columns>ExternalTransactionNumber</columns>
+    <columns>JournalType</columns>
+    <columns>Member</columns>
+    <columns>JournalSubType</columns>
+    <columns>JournalDate</columns>
+    <columns>Status</columns>
+    <columns>TransactionAmount</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>JournalSubType</field>
+        <operation>equals</operation>
+        <value>Voucher</value>
+    </filters>
+    <label>Sub Type Voucher</label>
+</ListView>

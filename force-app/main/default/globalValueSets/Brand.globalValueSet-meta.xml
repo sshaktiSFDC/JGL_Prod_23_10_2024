@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Jay Jays</fullName>
+        <default>false</default>
+        <label>Jay Jays</label>
+    </customValue>
+    <customValue>
+        <fullName>Just Jeans</fullName>
+        <default>false</default>
+        <label>Just Jeans</label>
+    </customValue>
+    <customValue>
+        <fullName>Peter Alexander</fullName>
+        <default>false</default>
+        <label>Peter Alexander</label>
+    </customValue>
+    <customValue>
+        <fullName>Smiggle</fullName>
+        <default>false</default>
+        <label>Smiggle</label>
+    </customValue>
+    <customValue>
+        <fullName>Jacqui E</fullName>
+        <default>false</default>
+        <label>Jacqui E</label>
+    </customValue>
+    <customValue>
+        <fullName>Dotti</fullName>
+        <default>false</default>
+        <label>Dotti</label>
+    </customValue>
+    <customValue>
+        <fullName>Portmans</fullName>
+        <default>false</default>
+        <label>Portmans</label>
+    </customValue>
+    <description>Used for capturing the brand related to Loyalty program</description>
+    <masterLabel>Brand</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

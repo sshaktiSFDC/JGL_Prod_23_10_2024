@@ -1,0 +1,113 @@
+<template>
+
+    <div class="slds-box slds-theme_default">  
+
+        <template if:true={showSpinner}>
+            <lightning-spinner alternative-text="Loading..." size="medium"></lightning-spinner>
+        </template>
+
+        <lightning-card title="Search Customers">
+            <div class="slds-m-around_medium">
+                <div>
+                    <lightning-input
+                        type="text"
+                        label="Search" 
+                        value={searchKey}
+                        onchange={handleInputChange}>
+                    </lightning-input>
+                </div>
+                <div class="slds-p-top_small">
+                    <div class="slds-grid">
+                        <div class="slds-col  slds-size_1-of-2">                            
+                            <lightning-button
+                                label="Search"
+                                variant="brand"
+                                onclick={handleSearch} >
+                            </lightning-button>     
+                        </div>
+                        <div class="slds-col slds-size_1-of-2 slds-text-align_right">
+                            <lightning-input
+                                name="AlwaysOpenNewWindow" 
+                                type="checkbox"
+                                label="Always open new window" 
+                                checked={alwaysOpenNewWindow}
+                                onchange={handleAlwaysOpenNewWindow}>
+                            </lightning-input>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </lightning-card>
+
+        <template if:true={customers}>
+
+            <div class="slds-p-top_small">
+
+                <div class="slds-p-bottom_medium">
+                    {resultsFoundInfo}
+                </div>
+
+                <table class="slds-table slds-table_bordered slds-border_left slds-border_right">
+                    
+                    <thead>     
+                        <th class="slds-align-top" scope="col">
+                            Membership Number                        
+                        </th>
+                        <th class="slds-align-top" scope="col">
+                            First Name                      
+                        </th>
+                        <th class="slds-align-top" scope="col">
+                            Last Name                      
+                        </th>                                        
+                        <th class="slds-align-top" scope="col">
+                            Email                     
+                        </th>                           
+                        <th class="slds-align-top" scope="col">
+                            Mobile                     
+                        </th> 
+                        <th class="slds-align-top" scope="col">
+                            Customer Id                     
+                        </th>                                                   
+                    </thead>
+            
+                    <tbody>
+
+                        <template for:each={customers} for:item="customer" for:index="index">
+                            <tr key={customer.customerId} data-id={customer.memberNumber} data-index={index} onclick={openMemberRecord}>
+        
+                                <td data-label="Membership Number">
+                                    {customer.memberNumber}
+                                </td>                             
+        
+                                <td data-label="First Name">
+                                    {customer.firstname}
+                                </td>      
+
+                                <td data-label="Last Name">
+                                    {customer.lastname}
+                                </td>
+        
+                                <td data-label="Email">
+                                    {customer.email}
+                                </td>
+
+                                <td data-label="Mobile">
+                                    {customer.mobile}
+                                </td> 
+                                
+                                <td data-label="Mobile">
+                                    {customer.customerId}
+                                </td>                                  
+                            </tr>
+                        </template>
+                    </tbody>        
+            
+                </table>
+            </div>
+        </template>
+
+
+
+    </div>
+
+</template>

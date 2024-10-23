@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Voucher_Points__c</fullName>
+    <description>Points to next voucher</description>
+    <externalId>false</externalId>
+    <formula>$Setup.Organisation_Settings__c.Voucher_Points_Target_Value__c - Status_Points__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Points to next voucher</inlineHelpText>
+    <label>Voucher Points</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

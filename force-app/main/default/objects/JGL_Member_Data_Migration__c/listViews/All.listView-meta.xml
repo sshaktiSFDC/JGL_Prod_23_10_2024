@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>CIM_Customer_ID__c</columns>
+    <columns>Date_of_Birth__c</columns>
+    <columns>EmailAddress__c</columns>
+    <columns>Enrollment_Channel__c</columns>
+    <columns>Enrollment_Date__c</columns>
+    <columns>First_Name__c</columns>
+    <columns>Just_Shop_Number__c</columns>
+    <columns>Country__c</columns>
+    <columns>Last_Name__c</columns>
+    <columns>Lifetime_Points__c</columns>
+    <columns>Member_Status__c</columns>
+    <columns>State__c</columns>
+    <columns>Status_Points__c</columns>
+    <columns>Voucher_Points__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All</label>
+</ListView>

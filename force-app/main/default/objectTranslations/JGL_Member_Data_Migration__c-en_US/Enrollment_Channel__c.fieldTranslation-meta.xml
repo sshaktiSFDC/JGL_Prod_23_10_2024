@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Enrollment Channel --></label>
+    <name>Enrollment_Channel__c</name>
+    <picklistValues>
+        <masterLabel>Call Center</masterLabel>
+        <translation><!-- Call Center --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Email</masterLabel>
+        <translation><!-- Email --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Franchise</masterLabel>
+        <translation><!-- Franchise --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>POS</masterLabel>
+        <translation><!-- POS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Partner</masterLabel>
+        <translation><!-- Partner --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Print</masterLabel>
+        <translation><!-- Print --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Social</masterLabel>
+        <translation><!-- Social --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Store</masterLabel>
+        <translation><!-- Store --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Web</masterLabel>
+        <translation><!-- Web --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>mobile</masterLabel>
+        <translation><!-- mobile --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

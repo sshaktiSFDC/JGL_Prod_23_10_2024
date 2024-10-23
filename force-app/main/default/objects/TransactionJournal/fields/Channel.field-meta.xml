@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Channel</fullName>
+    <description>The channel the member used for transactions</description>
+    <type>Picklist</type>
+</CustomField>

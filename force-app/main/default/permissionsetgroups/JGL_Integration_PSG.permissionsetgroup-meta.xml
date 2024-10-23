@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Permission set groups for Integration User</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>JGL Integration PSG</label>
+    <permissionSets>JGL_API_Integration_Access</permissionSets>
+    <permissionSets>JGL_Integration_Access</permissionSets>
+    <permissionSets>JGL_Password_No_Expiration</permissionSets>
+    <permissionSets>force__LoyaltyAdmin</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

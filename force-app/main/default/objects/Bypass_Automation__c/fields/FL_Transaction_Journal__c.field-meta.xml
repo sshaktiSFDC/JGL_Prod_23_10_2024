@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FL_Transaction_Journal__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>To bypass [Transaction Journal] Member Enrolment Process flow</description>
+    <externalId>false</externalId>
+    <label>FL Transaction Journal</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

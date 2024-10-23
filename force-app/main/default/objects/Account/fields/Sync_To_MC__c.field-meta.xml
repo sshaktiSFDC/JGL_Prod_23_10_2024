@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sync_To_MC__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Flag to control whether this record should be synced over to Marketing Cloud</description>
+    <externalId>false</externalId>
+    <label>Sync To MC</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

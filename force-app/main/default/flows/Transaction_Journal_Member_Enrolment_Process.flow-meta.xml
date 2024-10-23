@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>RunProgramProcess</name>
+        <label>Run Program Process</label>
+        <locationX>769</locationX>
+        <locationY>512</locationY>
+        <actionName>runProgramProcessForTransactionJournal</actionName>
+        <actionType>runProgramProcessForTransactionJournal</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>transactionJournalId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>runProgramProcessForTransactionJournal</nameSegment>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>60.0</apiVersion>
+    <environments>Default</environments>
+    <interviewLabel>[Transaction Journal] Member Enrolment Process {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>[Transaction Journal] Member Enrolment Process</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>641</locationX>
+        <locationY>49</locationY>
+        <connector>
+            <targetReference>RunProgramProcess</targetReference>
+        </connector>
+        <filterFormula>AND(NOT({!$Setup.Bypass_Automation__c.FL_Transaction_Journal__c}), {!$Record.JournalType.Name}==&quot;Accrual&quot;, {!$Record.JournalSubType.Name}=&quot;Member Enrollment&quot;)</filterFormula>
+        <object>TransactionJournal</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

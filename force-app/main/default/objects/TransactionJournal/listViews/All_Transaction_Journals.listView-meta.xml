@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Transaction_Journals</fullName>
+    <columns>Name</columns>
+    <columns>ActivityDate</columns>
+    <columns>Member</columns>
+    <columns>JournalType</columns>
+    <columns>JournalSubType</columns>
+    <columns>JournalDate</columns>
+    <columns>Status</columns>
+    <columns>TransactionAmount</columns>
+    <columns>Brand</columns>
+    <columns>VoucherCode</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Member</field>
+        <operation>equals</operation>
+        <value>2791009487471</value>
+    </filters>
+    <label>All Transaction Journals</label>
+</ListView>

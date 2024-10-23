@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Members_NZ</fullName>
+    <columns>Name</columns>
+    <columns>Account</columns>
+    <columns>Contact</columns>
+    <columns>MemberStatus</columns>
+    <columns>EnrollmentDate</columns>
+    <columns>MemberType</columns>
+    <columns>Program</columns>
+    <columns>LastActivityDate</columns>
+    <columns>MembershipEndDate</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>EnrollmentChannel</field>
+        <operation>equals</operation>
+        <value>2</value>
+    </filters>
+    <filters>
+        <field>EnrollmentDate</field>
+        <operation>greaterThan</operation>
+        <value>10/14/2024</value>
+    </filters>
+    <label>All Members - NZ</label>
+</ListView>

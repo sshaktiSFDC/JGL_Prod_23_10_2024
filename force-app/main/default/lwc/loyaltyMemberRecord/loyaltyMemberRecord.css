@@ -1,0 +1,5 @@
+.bordered-card {
+    border: 1px solid #d8dde6;  /* Adding a border to the wrapper div */
+    border-radius: 0.25rem;     /* Optional rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* Optional shadow for visual effect */
+}

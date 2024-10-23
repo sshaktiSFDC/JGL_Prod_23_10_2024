@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Voucher_Points_Target_Value__c</fullName>
+    <description>Target points threshold to issue a voucher</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Target points threshold member must achieve to get a voucher</inlineHelpText>
+    <label>Voucher Points Target Value</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

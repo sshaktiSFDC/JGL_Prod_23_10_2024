@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="PLATFORM EVENT TABLE" icon-name="standard:customer_portal_users">
+      <lightning-button slot="actions" variant={buttonVariant} label={buttonLabel} onclick={handleToggleSubscribe}></lightning-button>
+  
+      <div class="slds-m-around_medium">
+        <p>
+          View platform events.
+        </p>
+  
+        <div class="slds-m-top_medium">
+          <lightning-datatable data={logs} columns={columns} key-field="replayId" show-row-number-column hide-checkbox-column>
+          </lightning-datatable>
+        </div>
+      </div>
+    </lightning-card>
+  </template>

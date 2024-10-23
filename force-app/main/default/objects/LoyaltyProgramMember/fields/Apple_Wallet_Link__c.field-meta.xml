@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Apple_Wallet_Link__c</fullName>
+    <description>Link to digital wallet to add to Apple Wallet app on iOS devices</description>
+    <externalId>false</externalId>
+    <label>Apple Wallet Link</label>
+    <length>32768</length>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

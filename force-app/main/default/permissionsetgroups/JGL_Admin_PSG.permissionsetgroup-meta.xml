@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Permission set groups for System Admin Users</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>JGL Admin PSG</label>
+    <permissionSets>JGL_Admin_Access</permissionSets>
+    <permissionSets>JGL_Loyalty_Access</permissionSets>
+    <permissionSets>force__LoyaltyAdmin</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

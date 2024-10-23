@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_VoucherDefinitions</fullName>
+    <columns>Name</columns>
+    <columns>Type</columns>
+    <columns>EffectiveDate</columns>
+    <columns>ExpirationDate</columns>
+    <columns>DiscountPercent</columns>
+    <columns>Category__c</columns>
+    <columns>FaceValue</columns>
+    <columns>Product</columns>
+    <columns>LoyaltyProgram</columns>
+    <columns>Minimum_Spend__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All Voucher Definitions</label>
+</ListView>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <label>JBSystem_Voucher_RecordFlow</label>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>JBSystemFlow_Voucher</targetReference>
+        </connector>
+        <object>Voucher</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <name>JBSystemFlow_Voucher</name>
+        <label>JBSystemFlow_Voucher</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <flowName>JBSystemFlow_Voucher</flowName>
+        <inputAssignments>
+            <name>new_object</name>
+            <value>
+                <elementReference>$Record</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>old_object</name>
+            <value>
+                <elementReference>$Record__Prior</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+</Flow>
